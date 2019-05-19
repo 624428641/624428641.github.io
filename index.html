@@ -382,24 +382,12 @@
                 
               
 
-              <time title="Erstellt: 2019-05-19 00:00:00" itemprop="dateCreated datePublished" datetime="2019-05-19T00:00:00+08:00">2019-05-19</time>
+              <time title="Erstellt: 2019-05-19 00:00:00 / Geändert am: 11:10:47" itemprop="dateCreated datePublished" datetime="2019-05-19T00:00:00+08:00">2019-05-19</time>
             
 
             
               
 
-              
-                
-                <span class="post-meta-divider">|</span>
-                
-
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">Bearbeitet am</span>
-                
-                <time title="Geändert am: 2019-05-13 17:22:40" itemprop="dateModified" datetime="2019-05-13T17:22:40+08:00">2019-05-13</time>
               
             
           </span>
@@ -437,19 +425,19 @@
           
             <ul>
 <li style="list-style: none"><input type="checkbox"> 水平垂直居中</li>
-<li style="list-style: none"><input type="checkbox"> JavaStript</li>
 <li style="list-style: none"><input type="checkbox"> 盒模型</li>
 <li style="list-style: none"><input type="checkbox"> 布局方式</li>
-<li><p>[ ] position</p>
+<li style="list-style: none"><input type="checkbox"> position</li>
+</ul>
+<ul>
+<li><p>水平垂直居中<br>用相对绝对定位和负边距实现上下左右居中：高度和宽度已知<br><img src="https://img-blog.csdnimg.cn/20190519104208832.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NDc3OTcwNA==,size_16,color_FFFFFF,t_70" alt="负边距"><br>利用绝对定位来实现居中：适合高度，宽度已知的情况。<br><img src="https://img-blog.csdnimg.cn/20190519103231801.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NDc3OTcwNA==,size_16,color_FFFFFF,t_70" alt="绝对定位"><br>将父盒子设置为table-cell元素，text-align:center和vertical-align:middle实现水平垂直居中,父盒子高宽已知<br><img src="https://img-blog.csdnimg.cn/20190519110121727.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NDc3OTcwNA==,size_16,color_FFFFFF,t_70" alt="行内布局"><br>使用css3中的transform来时实现水平垂直居中：适合高度宽度未知的情况<br><img src="https://img-blog.csdnimg.cn/20190519104517583.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NDc3OTcwNA==,size_16,color_FFFFFF,t_70" alt="transform"><br>使用Flexbox来实现水平垂直居中,设置是相对于所有子元素进行计算的<br><img src="https://img-blog.csdnimg.cn/20190519105732985.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NDc3OTcwNA==,size_16,color_FFFFFF,t_70" alt="flex布局"></p>
 </li>
-<li><p>水平垂直居中<br>用inline-block和vertical-align来实现居中：这种方法适合于未知宽度高度的情况下<br>用相对绝对定位和负边距实现上下左右居中：高度和宽度已知<br>利用绝对定位来实现居中：适合高度，宽度已知的情况。<br>使用table-cell，inline-block实现水平垂直居中：适合高度宽度未知的情况<br>使用css3中的transform来时实现水平垂直居中：适合高度宽度未知的情况<br>使用Flexbox来实现水平垂直居中；适合宽度高度未知情况，但是要注意兼容性</p>
+<li><p>盒模型<br>盒模型包含：margin、padding、border、内容区域<br>嵌套结构下，当父级没有明确的上边界时(border，padding)，这时候子级设置margin-top的话，就会传递给父级，带着父级一起向下移动。</p>
 </li>
-<li><p>水平垂直居中</p>
+<li><p>布局方式</p>
 </li>
-<li>JavaStript</li>
-<li>盒模型</li>
-<li>布局方式</li>
-<li>position</li>
+<li><p>position<br>absolute：绝对定位<br>相对于position不是static的父（更往上）标签来进行定位的，如果没有父标签，相对html<br>fixed：固定定位<br>页面向下滚动的时候，始终以浏览器窗口为参照,固定在页面上.<br>relative：相对定位<br>对于自己文档的位置来定位的，对旁边的元素没有影响<br>static：默认值<br>inherit：规定应该从父元素继承 position 属性的值</p>
+</li>
 </ul>
 
           
