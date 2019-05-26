@@ -382,7 +382,7 @@
                 
               
 
-              <time title="Erstellt: 2019-05-26 00:00:00 / Geändert am: 13:25:12" itemprop="dateCreated datePublished" datetime="2019-05-26T00:00:00+08:00">2019-05-26</time>
+              <time title="Erstellt: 2019-05-26 00:00:00 / Geändert am: 13:46:18" itemprop="dateCreated datePublished" datetime="2019-05-26T00:00:00+08:00">2019-05-26</time>
             
 
             
@@ -423,8 +423,7 @@
       
         
           
-            <p>JavaScript在HTML中三种使用方式：</p>
-<ol>
+            <h3 id="JavaScript在HTML中三种使用方式："><a href="#JavaScript在HTML中三种使用方式：" class="headerlink" title="JavaScript在HTML中三种使用方式："></a>JavaScript在HTML中三种使用方式：</h3><ol>
 <li>在HTML代码<code>&lt;head&gt;</code>中包含<code>&lt;script type=&quot;text/javascript&quot;&gt;（代码块）&lt;/script&gt;</code>。</li>
 <li>在HTML代码<code>&lt;head&gt;</code>中使用<code>&lt;script type=&quot;text/javascript&quot; src=&quot;x.js&quot;&gt;&lt;/script&gt;</code>包含外部文件。<br> （解析完JS代码之后页面内容才显示出来）</li>
 <li>在HTML代码<code>&lt;body&gt;</code>最下方使用<code>&lt;script type=&quot;text/javascript&quot; src=&quot;x.js&quot;&gt;&lt;/script&gt;</code>包含外部文件。</li>
@@ -432,6 +431,34 @@
 <blockquote>
 <p>alert()在浏览器中弹出警告框<br>document.write()向body中输出内容<br>console.log()向控制台输出内容</p>
 </blockquote>
+<h3 id="JS六个数据类型："><a href="#JS六个数据类型：" class="headerlink" title="JS六个数据类型："></a>JS六个数据类型：</h3><ul>
+<li>五个基本数据类型：number  null  string  boolean  undefined</li>
+<li>一个复杂数据类型：object</li>
+</ul>
+<p>typeof用来检查数据的类型，以字符串形式返回<br><code>typeof null = object</code><br>NaN + 任何数据 = NaN</p>
+<hr>
+<h3 id="强制转换数据类型："><a href="#强制转换数据类型：" class="headerlink" title="强制转换数据类型："></a>强制转换数据类型：</h3><table>
+<thead>
+<tr>
+<th>转换类型</th>
+<th>转换方式(原类型均不改变)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>转换成string类型</td>
+<td>1.调用String()函数 <br>2.被转类型.toString() <del>null和undefined不能使用该方法</del> <br>3.任意类型+””</td>
+</tr>
+<tr>
+<td>转换成number类型</td>
+<td>1.调用Number()函数 <del>空字符串,nall,false-&gt;0 true-&gt;1 undefined,含有非数字的字符串-&gt;NaN</del> <br>2.专用于字符串①parseInt(转换类型,进制)整数，遇到第一个非数字即停止 ②parseFloat()小数 <br>3.任意类型+0或者*1或者/1</td>
+</tr>
+<tr>
+<td>转换成boolean类型</td>
+<td>调用Boolean()函数 <del>0,NaN,undefined,空字符串-&gt;false 空格的字符串,false,true-&gt;true</del></td>
+</tr>
+</tbody>
+</table>
 
           
         
