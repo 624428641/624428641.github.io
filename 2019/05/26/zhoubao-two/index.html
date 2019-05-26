@@ -96,14 +96,17 @@
 
 
 
-  <meta property="og:type" content="article">
+  <meta name="description" content="关系运算符中，如果符合两边都是字符串，不会将其变成数值比较，是分别比较字符的Unicode编码  输出Unicode编码：  在JS中，使用 \u+16进制的编码 在网页中，使用 &amp;amp;#+10进制的编码   相等运算符==、!=会自动类型转换，===、!==不会自动类型转换  console.log(null == 0); //false   console.log(null == und">
+<meta property="og:type" content="article">
 <meta property="og:title" content="周报">
 <meta property="og:url" content="http://yoursite.com/2019/05/26/zhoubao-two/index.html">
 <meta property="og:site_name" content="卿歌">
+<meta property="og:description" content="关系运算符中，如果符合两边都是字符串，不会将其变成数值比较，是分别比较字符的Unicode编码  输出Unicode编码：  在JS中，使用 \u+16进制的编码 在网页中，使用 &amp;amp;#+10进制的编码   相等运算符==、!=会自动类型转换，===、!==不会自动类型转换  console.log(null == 0); //false   console.log(null == und">
 <meta property="og:locale" content="zh-cn">
-<meta property="og:updated_time" content="2019-05-26T07:51:58.213Z">
+<meta property="og:updated_time" content="2019-05-26T09:23:42.570Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="周报">
+<meta name="twitter:description" content="关系运算符中，如果符合两边都是字符串，不会将其变成数值比较，是分别比较字符的Unicode编码  输出Unicode编码：  在JS中，使用 \u+16进制的编码 在网页中，使用 &amp;amp;#+10进制的编码   相等运算符==、!=会自动类型转换，===、!==不会自动类型转换  console.log(null == 0); //false   console.log(null == und">
 
 
 
@@ -189,7 +192,7 @@
   </div>
 
   <div class="site-nav-toggle">
-    <button aria-label="Toggle navigation bar">
+    <button aria-label="Navigationsleiste an/ausschalten">
       <span class="btn-bar"></span>
       <span class="btn-bar"></span>
       <span class="btn-bar"></span>
@@ -373,14 +376,14 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">Posted on</span>
+                <span class="post-meta-item-text">Veröffentlicht am</span>
               
 
               
                 
               
 
-              <time title="Created: 2019-05-26 15:51:01 / Modified: 15:51:58" itemprop="dateCreated datePublished" datetime="2019-05-26T15:51:01+08:00">2019-05-26</time>
+              <time title="Erstellt: 2019-05-26 15:51:01 / Geändert am: 17:23:42" itemprop="dateCreated datePublished" datetime="2019-05-26T15:51:01+08:00">2019-05-26</time>
             
 
             
@@ -419,7 +422,32 @@
       
 
       
-        
+        <blockquote>
+<p>关系运算符中，如果符合两边都是字符串，不会将其变成数值比较，是分别比较字符的Unicode编码</p>
+</blockquote>
+<p>输出Unicode编码：</p>
+<ol>
+<li>在JS中，使用 \u+16进制的编码</li>
+<li>在网页中，使用 &amp;#+10进制的编码</li>
+</ol>
+<hr>
+<h3 id="相等运算符"><a href="#相等运算符" class="headerlink" title="相等运算符"></a>相等运算符</h3><p>==、!=会自动类型转换，===、!==不会自动类型转换</p>
+<blockquote>
+<p><code>console.log(null == 0);</code> //false</p>
+</blockquote>
+<blockquote>
+<p><code>console.log(null == undefined);</code> //true</p>
+</blockquote>
+<blockquote>
+<p><code>console.log(null === undefined);</code> //false</p>
+</blockquote>
+<blockquote>
+<p><code>console.log(NaN == NaN);</code> //false<br>(NaN和任何数据都不相等)用<code>isNaN()</code>函数判断是否为NaN</p>
+</blockquote>
+<blockquote>
+<p><code>console.log(&quot;123&quot; === 123);</code> //false</p>
+</blockquote>
+<h3 id="条件运算符（三元运算符）"><a href="#条件运算符（三元运算符）" class="headerlink" title="条件运算符（三元运算符）"></a>条件运算符（三元运算符）</h3>
       
     </div>
 
@@ -449,8 +477,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/05/26/zhoubao-one/" rel="next" title="周报">
-                <i class="fa fa-chevron-left"></i> 周报
+              <a href="/2019/05/26/zhoubao-one/" rel="next" title="JS数据类型和转换">
+                <i class="fa fa-chevron-left"></i> JS数据类型和转换
               </a>
             
           </div>
@@ -501,8 +529,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Inhaltsverzeichnis
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Übersicht
+          </li>
+        </ul>
+      
 
-      <div class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <div class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -520,7 +557,7 @@
                   <a href="/archives">
                 
                     <span class="site-state-item-count">4</span>
-                    <span class="site-state-item-name">posts</span>
+                    <span class="site-state-item-name">Artikel</span>
                   </a>
                 </div>
               
@@ -610,6 +647,23 @@
       </div>
 
       
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#相等运算符"><span class="nav-number">1.</span> <span class="nav-text">相等运算符</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#条件运算符（三元运算符）"><span class="nav-number">2.</span> <span class="nav-text">条件运算符（三元运算符）</span></a></li></ol></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
+      
 
       
         <div class="back-to-top">
@@ -643,7 +697,7 @@
 </div>
 
 
-  <div class="powered-by">Powered by <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> v3.8.0</div>
+  <div class="powered-by">Erstellt mit  <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> v3.8.0</div>
 
 
 
@@ -651,7 +705,7 @@
 
 
 
-  <div class="theme-info">Theme – <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a> v7.1.1</div>
+  <div class="theme-info">Design – <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a> v7.1.1</div>
 
 
 
