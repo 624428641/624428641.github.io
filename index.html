@@ -382,7 +382,7 @@
                 
               
 
-              <time title="Erstellt: 2019-05-26 00:00:00 / Geändert am: 13:46:18" itemprop="dateCreated datePublished" datetime="2019-05-26T00:00:00+08:00">2019-05-26</time>
+              <time title="Erstellt: 2019-05-26 00:00:00 / Geändert am: 15:26:26" itemprop="dateCreated datePublished" datetime="2019-05-26T00:00:00+08:00">2019-05-26</time>
             
 
             
@@ -451,14 +451,22 @@
 </tr>
 <tr>
 <td>转换成number类型</td>
-<td>1.调用Number()函数 <del>空字符串,nall,false-&gt;0 true-&gt;1 undefined,含有非数字的字符串-&gt;NaN</del> <br>2.专用于字符串①parseInt(转换类型,进制)整数，遇到第一个非数字即停止 ②parseFloat()小数 <br>3.任意类型+0或者*1或者/1</td>
+<td>1.调用Number()函数 <del>空字符串,nall,false-&gt;0 true-&gt;1 undefined,含有非数字的字符串-&gt;NaN</del> <br>2.专用于字符串①parseInt(转换类型,进制)整数，遇到第一个非数字即停止 ②parseFloat()小数 <br>3.任意类型+0或者*1或者/1 <br>4.其他类型前加+（一元运算符）</td>
 </tr>
 <tr>
 <td>转换成boolean类型</td>
-<td>调用Boolean()函数 <del>0,NaN,undefined,空字符串-&gt;false 空格的字符串,false,true-&gt;true</del></td>
+<td>1.调用Boolean()函数 <del>0,NaN,undefined,空字符串-&gt;false 空格的字符串,false,true-&gt;true</del> <br>2.在任意数据前加!!</td>
 </tr>
 </tbody>
 </table>
+<h3 id="逻辑运算符"><a href="#逻辑运算符" class="headerlink" title="逻辑运算符"></a>逻辑运算符</h3><blockquote>
+<p>逻辑运算符：！非 &nbsp;&amp;&amp;与 &nbsp;||或</p>
+</blockquote>
+<ul>
+<li>!非  对非布尔值先将其变成布尔值</li>
+<li>&amp;&amp;与  返回布尔值，有假则假。</li>
+<li>||或  返回布尔值，有真则真。</li>
+</ul>
 
           
         
