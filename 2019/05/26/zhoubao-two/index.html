@@ -103,7 +103,7 @@
 <meta property="og:site_name" content="卿歌">
 <meta property="og:description" content="关系运算符中，如果符合两边都是字符串，不会将其变成数值比较，是分别比较字符的Unicode编码  输出Unicode编码：  在JS中，使用 \u+16进制的编码 在网页中，使用 &amp;amp;#+10进制的编码   相等运算符==、!=会自动类型转换，===、!==不会自动类型转换  console.log(null == 0); //false   console.log(null == und">
 <meta property="og:locale" content="zh-cn">
-<meta property="og:updated_time" content="2019-05-26T09:23:42.570Z">
+<meta property="og:updated_time" content="2019-05-27T10:30:54.588Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="周报">
 <meta name="twitter:description" content="关系运算符中，如果符合两边都是字符串，不会将其变成数值比较，是分别比较字符的Unicode编码  输出Unicode编码：  在JS中，使用 \u+16进制的编码 在网页中，使用 &amp;amp;#+10进制的编码   相等运算符==、!=会自动类型转换，===、!==不会自动类型转换  console.log(null == 0); //false   console.log(null == und">
@@ -383,12 +383,24 @@
                 
               
 
-              <time title="Erstellt: 2019-05-26 15:51:01 / Geändert am: 17:23:42" itemprop="dateCreated datePublished" datetime="2019-05-26T15:51:01+08:00">2019-05-26</time>
+              <time title="Erstellt: 2019-05-26 15:51:01" itemprop="dateCreated datePublished" datetime="2019-05-26T15:51:01+08:00">2019-05-26</time>
             
 
             
               
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Bearbeitet am</span>
+                
+                <time title="Geändert am: 2019-05-27 18:30:54" itemprop="dateModified" datetime="2019-05-27T18:30:54+08:00">2019-05-27</time>
               
             
           </span>
@@ -447,7 +459,19 @@
 <blockquote>
 <p><code>console.log(&quot;123&quot; === 123);</code> //false</p>
 </blockquote>
-<h3 id="条件运算符（三元运算符）"><a href="#条件运算符（三元运算符）" class="headerlink" title="条件运算符（三元运算符）"></a>条件运算符（三元运算符）</h3>
+<h3 id="条件运算符（三元运算符）"><a href="#条件运算符（三元运算符）" class="headerlink" title="条件运算符（三元运算符）"></a>条件运算符（三元运算符）</h3><p>条件表达式？语句1：语句2；<br>如果条件表达式不是布尔值，会先将其转化为布尔值。</p>
+<h3 id="运算符优先级"><a href="#运算符优先级" class="headerlink" title="运算符优先级"></a>运算符优先级</h3><p>优先级排序：.、[]、new <code>&gt;</code> () &gt; ++、– <code>&gt;</code> !、~、+(单目)、-(单目)、tupeof、void、delete <code>&gt;</code> %、*、/ <code>&gt;</code> +(双目)、-(双目) <code>&gt;</code> &lt;&lt;、&gt;&gt;、&gt;&gt;&gt; <code>&gt;</code> &lt;、&lt;=、&gt;、&gt;= <code>&gt;</code> ==、!==、=== <code>&gt;</code> &amp; <code>&gt;</code> ^ <code>&gt;</code> | <code>&gt;</code> &amp;&amp; <code>&gt;</code> || <code>&gt;</code> ?: <code>&gt;</code> =、+=、-=、/=、%=、&lt;&lt;=、&gt;&gt;=、&gt;&gt;&gt;=、&amp;=、^=、|=、*= <code>&gt;</code> ,</p>
+<hr>
+<blockquote>
+<p>代码块只有分组作用，代码块内内容外部可以访问。</p>
+</blockquote>
+<h3 id="语句"><a href="#语句" class="headerlink" title="语句"></a>语句</h3><ol>
+<li><code>if</code></li>
+<li><code>switch</code></li>
+<li><code>while</code></li>
+<li><code>for</code></li>
+</ol>
+
       
     </div>
 
@@ -657,7 +681,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#相等运算符"><span class="nav-number">1.</span> <span class="nav-text">相等运算符</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#条件运算符（三元运算符）"><span class="nav-number">2.</span> <span class="nav-text">条件运算符（三元运算符）</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#相等运算符"><span class="nav-number">1.</span> <span class="nav-text">相等运算符</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#条件运算符（三元运算符）"><span class="nav-number">2.</span> <span class="nav-text">条件运算符（三元运算符）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#运算符优先级"><span class="nav-number">3.</span> <span class="nav-text">运算符优先级</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#语句"><span class="nav-number">4.</span> <span class="nav-text">语句</span></a></li></ol></div>
             
 
           </div>
