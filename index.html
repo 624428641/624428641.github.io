@@ -553,7 +553,7 @@
                 
                   <span class="post-meta-item-text">Bearbeitet am</span>
                 
-                <time title="Geändert am: 2019-06-01 15:42:03" itemprop="dateModified" datetime="2019-06-01T15:42:03+08:00">2019-06-01</time>
+                <time title="Geändert am: 2019-06-02 11:35:23" itemprop="dateModified" datetime="2019-06-02T11:35:23+08:00">2019-06-02</time>
               
             
           </span>
@@ -620,8 +620,12 @@
 </ol>
 <ul>
 <li>调用函数 <code>函数对象名字()</code></li>
-<li>函数的参数<br>调用函数时，解析器不会检查实参的类型，函数的实参可以是任意的数据类型<br>多余的实参不会被辅助，如果实参数量少于形参的数量，则没有对应实参的形参将是unndefined</li>
+<li>函数的参数<br>调用函数时，解析器不会检查实参的类型，函数的实参可以是任意的数据类型，可以是一个对象，一个函数<br>多余的实参不会被辅助，如果实参数量少于形参的数量，则没有对应实参的形参将是unndefined<br>参数过多的时候，可以将参数封装到一个对象中，然后通过对象传递。<br>函数名（）  相当于使用函数的返回值<br>函数名  相当于直接使用函数<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">function hello(o)&#123;</span><br><span class="line">	console.log(&quot;asd&quot;+o.name+o.age+o.xxx)</span><br><span class="line">&#125;</span><br><span class="line">var obj=&#123;</span><br><span class="line">	name=&quot;qwe&quot;,</span><br><span class="line">	age:10,</span><br><span class="line">	....,</span><br><span class="line">&#125;;</span><br><span class="line">function fun(a)&#123;</span><br><span class="line">	console.log(a);</span><br><span class="line">	a(obj);</span><br><span class="line">&#125;</span><br><span class="line">fun(hello);</span><br><span class="line"></span><br><span class="line">//asdqwe10....</span><br></pre></td></tr></table></figure>
+</li>
 </ul>
+<blockquote>
+<p>在函数中，return 后的语句都不会执行<br><code>return;</code> = <code>return undefined;</code></p>
+</blockquote>
 
           
         
