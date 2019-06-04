@@ -399,7 +399,7 @@
                 
                   <span class="post-meta-item-text">Bearbeitet am</span>
                 
-                <time title="Geändert am: 2019-06-03 20:44:30" itemprop="dateModified" datetime="2019-06-03T20:44:30+08:00">2019-06-03</time>
+                <time title="Geändert am: 2019-06-04 20:10:24" itemprop="dateModified" datetime="2019-06-04T20:10:24+08:00">2019-06-04</time>
               
             
           </span>
@@ -449,7 +449,33 @@
 </blockquote>
 </li>
 </ul>
-<h3 id="this"><a href="#this" class="headerlink" title="this"></a>this</h3>
+<h3 id="this"><a href="#this" class="headerlink" title="this"></a>this</h3><blockquote>
+<p>解析器在调用函数每次都会向函数内部传递一个隐含的参数this,this指向一个对象，称为函数执行的上下文对象。</p>
+</blockquote>
+<p>根据函数调用方式不同，this指向不同</p>
+<ol>
+<li>以函数形式调用，this一直是window</li>
+<li>以方法形式调用，this是调用方法的对象</li>
+</ol>
+<hr>
+<h3 id="对象"><a href="#对象" class="headerlink" title="对象"></a>对象</h3><ul>
+<li><p>使用工厂方法创建对象。大批量创建对象<br>创建的对象都是Object类型，无法区分多种类型</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">function creat(name,x,...)&#123;</span><br><span class="line">	var obj=new Object();</span><br><span class="line">	obj.name=&quot;name&quot;;</span><br><span class="line">	obj.x=x;</span><br><span class="line">	obj....=...;</span><br><span class="line">	obj.say=function()&#123;</span><br><span class="line">		alert(this.name);</span><br><span class="line">	&#125;;</span><br><span class="line">	return obj;</span><br><span class="line">&#125;</span><br><span class="line">//Object&#123;name:....&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>构造函数<br>普通函数直接调用，构造函数需要使用<code>new</code>关键字调用.<br>构造函数的执行流程：</p>
+</li>
+</ul>
+<ol>
+<li>创建一个新的对象</li>
+<li>将创建的对象设置为函数中的this，在构造函数中使用this引用新建对象</li>
+<li>执行函数代码</li>
+<li>将创建的对象作为返回值返回<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">function Person(name,x,...)&#123;</span><br><span class="line">	this.name=&quot;name&quot;;</span><br><span class="line">	this.x=x;</span><br><span class="line">	this....=...;</span><br><span class="line">	this.say=function()&#123;</span><br><span class="line">		alert(this.name);</span><br><span class="line">	&#125;;</span><br><span class="line">&#125;</span><br><span class="line">var obj1=new Person();</span><br><span class="line">var obj2=new Person();</span><br><span class="line">//Person&#123;name:....&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<blockquote>
+<p><code>instanceof</code>检查一个对象是否是一个类的实例（通过构造函数创建的对象）。<code>对象 instanceof 构造函数</code></p>
+</blockquote>
+
           
         
       
