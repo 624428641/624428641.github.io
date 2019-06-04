@@ -103,7 +103,7 @@
 <meta property="og:site_name" content="卿歌">
 <meta property="og:description" content="枚举对象中的属性for(var 变量 in 对象){语句}对象有几个属性就会执行几次循环，每次执行，会将对象中的一个属性的名字复制给变量。1234for(var n in obj)&amp;#123;	console.log(&amp;quot;ming&amp;quot;+n);	console.log(&amp;quot;zhi&amp;quot;+obj[n]);&amp;#125; 作用域指变量作用的范围  全局作用域直接卸载scrip">
 <meta property="og:locale" content="zh-cn">
-<meta property="og:updated_time" content="2019-06-03T11:30:15.663Z">
+<meta property="og:updated_time" content="2019-06-03T12:44:30.195Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="周报">
 <meta name="twitter:description" content="枚举对象中的属性for(var 变量 in 对象){语句}对象有几个属性就会执行几次循环，每次执行，会将对象中的一个属性的名字复制给变量。1234for(var n in obj)&amp;#123;	console.log(&amp;quot;ming&amp;quot;+n);	console.log(&amp;quot;zhi&amp;quot;+obj[n]);&amp;#125; 作用域指变量作用的范围  全局作用域直接卸载scrip">
@@ -400,7 +400,7 @@
                 
                   <span class="post-meta-item-text">Bearbeitet am</span>
                 
-                <time title="Geändert am: 2019-06-03 19:30:15" itemprop="dateModified" datetime="2019-06-03T19:30:15+08:00">2019-06-03</time>
+                <time title="Geändert am: 2019-06-03 20:44:30" itemprop="dateModified" datetime="2019-06-03T20:44:30+08:00">2019-06-03</time>
               
             
           </span>
@@ -437,9 +437,18 @@
         <p>枚举对象中的属性<br><code>for(var 变量 in 对象){语句}</code><br>对象有几个属性就会执行几次循环，每次执行，会将对象中的一个属性的名字复制给变量。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">for(var n in obj)&#123;</span><br><span class="line">	console.log(&quot;ming&quot;+n);</span><br><span class="line">	console.log(&quot;zhi&quot;+obj[n]);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
 <h3 id="作用域"><a href="#作用域" class="headerlink" title="作用域"></a>作用域</h3><p>指变量作用的范围</p>
 <ul>
-<li>全局作用域<br>直接卸载script标签中的JS代码都在全局作用域中<br>页面打开时创建，关闭时销毁<br>全局对象window，可以直接使用，代表浏览器的窗口，由浏览器创建<br>创建的变量都会作为window对象的属性保存</li>
+<li>全局作用域<br>直接卸载script标签中的JS代码都在全局作用域中。页面打开时创建，关闭时销毁<br>全局对象window，可以直接使用，代表浏览器的窗口，由浏览器创建<br>创建的变量都会作为window对象的属性保存</li>
 </ul>
-
+<blockquote>
+<p>变量声明提前：使用var关键字声明的变量会在所有代码执行之前被声明。<br>函数声明提前：函数声明<code>function a(){}</code>之前调用函数不会报错；函数表达式<code>var a=function(){}</code>之前调用函数会报错。</p>
+</blockquote>
+<ul>
+<li>函数作用域<br>调用函数时创建函数作用域，函数执行完毕以后销毁。其中可以访问全局作用域的变量。全局作用域不能访问函数作用域。<br>每调用一次函数就会创建一个新的函数作用域，之间互相独立。<br>函数中变量不使用var关键字，则会设置为全局变量<blockquote>
+<p>也有变量、函数声明提前。</p>
+</blockquote>
+</li>
+</ul>
+<h3 id="this"><a href="#this" class="headerlink" title="this"></a>this</h3>
       
     </div>
 
@@ -649,7 +658,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#作用域"><span class="nav-number">1.</span> <span class="nav-text">作用域</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#作用域"><span class="nav-number">1.</span> <span class="nav-text">作用域</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#this"><span class="nav-number">2.</span> <span class="nav-text">this</span></a></li></ol></div>
             
 
           </div>
