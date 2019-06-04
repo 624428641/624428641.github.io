@@ -96,17 +96,14 @@
 
 
 
-  <meta name="description" content="JavaScript在HTML中三种使用方式： 在HTML代码&amp;lt;head&amp;gt;中包含&amp;lt;script type=&amp;quot;text/javascript&amp;quot;&amp;gt;（代码块）&amp;lt;/script&amp;gt;。 在HTML代码&amp;lt;head&amp;gt;中使用&amp;lt;script type=&amp;quot;text/javascript&amp;quot; src=&amp;quot;x.js&amp;quot">
-<meta property="og:type" content="article">
-<meta property="og:title" content="JS数据类型和转换">
-<meta property="og:url" content="http://yoursite.com/2019/05/26/zhoubao-one/index.html">
+  <meta property="og:type" content="article">
+<meta property="og:title" content="zhoubao-5">
+<meta property="og:url" content="http://yoursite.com/2019/06/04/zhoubao-5/index.html">
 <meta property="og:site_name" content="卿歌">
-<meta property="og:description" content="JavaScript在HTML中三种使用方式： 在HTML代码&amp;lt;head&amp;gt;中包含&amp;lt;script type=&amp;quot;text/javascript&amp;quot;&amp;gt;（代码块）&amp;lt;/script&amp;gt;。 在HTML代码&amp;lt;head&amp;gt;中使用&amp;lt;script type=&amp;quot;text/javascript&amp;quot; src=&amp;quot;x.js&amp;quot">
 <meta property="og:locale" content="zh-cn">
-<meta property="og:updated_time" content="2019-05-26T09:23:39.777Z">
+<meta property="og:updated_time" content="2019-06-04T12:11:18.728Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="JS数据类型和转换">
-<meta name="twitter:description" content="JavaScript在HTML中三种使用方式： 在HTML代码&amp;lt;head&amp;gt;中包含&amp;lt;script type=&amp;quot;text/javascript&amp;quot;&amp;gt;（代码块）&amp;lt;/script&amp;gt;。 在HTML代码&amp;lt;head&amp;gt;中使用&amp;lt;script type=&amp;quot;text/javascript&amp;quot; src=&amp;quot;x.js&amp;quot">
+<meta name="twitter:title" content="zhoubao-5">
 
 
 
@@ -114,7 +111,7 @@
 
   
   
-  <link rel="canonical" href="http://yoursite.com/2019/05/26/zhoubao-one/">
+  <link rel="canonical" href="http://yoursite.com/2019/06/04/zhoubao-5/">
 
 
 
@@ -124,7 +121,7 @@
   };
 </script>
 
-  <title>JS数据类型和转换 | 卿歌</title>
+  <title>zhoubao-5 | 卿歌</title>
   
 
 
@@ -340,7 +337,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/05/26/zhoubao-one/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/06/04/zhoubao-5/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="WangYuLin">
@@ -357,7 +354,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">JS数据类型和转换
+          <h1 class="post-title" itemprop="name headline">zhoubao-5
 
               
             
@@ -383,13 +380,9 @@
                 
               
 
-              <time title="Erstellt: 2019-05-26 00:00:00 / Geändert am: 17:23:39" itemprop="dateCreated datePublished" datetime="2019-05-26T00:00:00+08:00">2019-05-26</time>
+              <time title="Erstellt: 2019-06-04 20:11:18" itemprop="dateCreated datePublished" datetime="2019-06-04T20:11:18+08:00">2019-06-04</time>
             
 
-            
-              
-
-              
             
           </span>
 
@@ -422,51 +415,7 @@
       
 
       
-        <h3 id="JavaScript在HTML中三种使用方式："><a href="#JavaScript在HTML中三种使用方式：" class="headerlink" title="JavaScript在HTML中三种使用方式："></a>JavaScript在HTML中三种使用方式：</h3><ol>
-<li>在HTML代码<code>&lt;head&gt;</code>中包含<code>&lt;script type=&quot;text/javascript&quot;&gt;（代码块）&lt;/script&gt;</code>。</li>
-<li>在HTML代码<code>&lt;head&gt;</code>中使用<code>&lt;script type=&quot;text/javascript&quot; src=&quot;x.js&quot;&gt;&lt;/script&gt;</code>包含外部文件。<br> （解析完JS代码之后页面内容才显示出来）</li>
-<li>在HTML代码<code>&lt;body&gt;</code>最下方使用<code>&lt;script type=&quot;text/javascript&quot; src=&quot;x.js&quot;&gt;&lt;/script&gt;</code>包含外部文件。</li>
-</ol>
-<blockquote>
-<p>alert()在浏览器中弹出警告框<br>document.write()向body中输出内容<br>console.log()向控制台输出内容</p>
-</blockquote>
-<h3 id="JS六个数据类型："><a href="#JS六个数据类型：" class="headerlink" title="JS六个数据类型："></a>JS六个数据类型：</h3><ul>
-<li>五个基本数据类型：number  null  string  boolean  undefined</li>
-<li>一个复杂数据类型：object</li>
-</ul>
-<p>typeof用来检查数据的类型，以字符串形式返回<br><code>typeof null = object</code><br>NaN + 任何数据 = NaN</p>
-<hr>
-<h3 id="强制转换数据类型："><a href="#强制转换数据类型：" class="headerlink" title="强制转换数据类型："></a>强制转换数据类型：</h3><table>
-<thead>
-<tr>
-<th>转换类型</th>
-<th>转换方式(原类型均不改变)</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>转换成string类型</td>
-<td>1.调用String()函数 <br>2.被转类型.toString() <del>null和undefined不能使用该方法</del> <br>3.任意类型+””</td>
-</tr>
-<tr>
-<td>转换成number类型</td>
-<td>1.调用Number()函数 <del>空字符串,nall,false-&gt;0 true-&gt;1 undefined,含有非数字的字符串-&gt;NaN</del> <br>2.专用于字符串①parseInt(转换类型,进制)整数，遇到第一个非数字即停止 ②parseFloat()小数 <br>3.任意类型+0或者*1或者/1 <br>4.其他类型前加+（一元运算符）</td>
-</tr>
-<tr>
-<td>转换成boolean类型</td>
-<td>1.调用Boolean()函数 <del>0,NaN,undefined,空字符串-&gt;false 空格的字符串,false,true-&gt;true</del> <br>2.在任意数据前加!!</td>
-</tr>
-</tbody>
-</table>
-<h3 id="逻辑运算符"><a href="#逻辑运算符" class="headerlink" title="逻辑运算符"></a>逻辑运算符</h3><blockquote>
-<p>逻辑运算符：！非 &nbsp;&amp;&amp;与 &nbsp;||或</p>
-</blockquote>
-<ul>
-<li>!非  取反（非布尔值会先将其转化为布尔值）</li>
-<li>&amp;&amp;与  返回布尔值，有假则假。如果第一个值是假，则不会看后面那个。（非布尔值会先将其转化为布尔值，并返回原值（&amp;&amp;、||两个true返回后面的，两个false返回前面的））</li>
-<li>||或  返回布尔值，有真则真。如果第一个值是真，则不会看后面那个。（非布尔值会先将其转化为布尔值，并返回原值（&amp;&amp;、||两个true返回前面的，两个false返回后面的））</li>
-</ul>
-
+        
       
     </div>
 
@@ -496,8 +445,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/05/19/first-try/" rel="next" title="大一第一次考核补充">
-                <i class="fa fa-chevron-left"></i> 大一第一次考核补充
+              <a href="/2019/06/02/zhoubao-two/" rel="next" title="JS运算符和条件循环语句">
+                <i class="fa fa-chevron-left"></i> JS运算符和条件循环语句
               </a>
             
           </div>
@@ -506,8 +455,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2019/06/02/zhoubao-two/" rel="prev" title="JS运算符和条件循环语句">
-                JS运算符和条件循环语句 <i class="fa fa-chevron-right"></i>
+              <a href="/2019/06/09/zhoubao-3/" rel="prev" title="对象和函数">
+                对象和函数 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -552,17 +501,8 @@
       
 
       
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
-            Inhaltsverzeichnis
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
-            Übersicht
-          </li>
-        </ul>
-      
 
-      <div class="site-overview-wrap sidebar-panel">
+      <div class="site-overview-wrap sidebar-panel sidebar-panel-active">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -669,23 +609,6 @@
         </div>
       </div>
 
-      
-      <!--noindex-->
-        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-
-            
-            
-            
-            
-
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#JavaScript在HTML中三种使用方式："><span class="nav-number">1.</span> <span class="nav-text">JavaScript在HTML中三种使用方式：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#JS六个数据类型："><span class="nav-number">2.</span> <span class="nav-text">JS六个数据类型：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#强制转换数据类型："><span class="nav-number">3.</span> <span class="nav-text">强制转换数据类型：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#逻辑运算符"><span class="nav-number">4.</span> <span class="nav-text">逻辑运算符</span></a></li></ol></div>
-            
-
-          </div>
-        </div>
-      <!--/noindex-->
       
 
       
