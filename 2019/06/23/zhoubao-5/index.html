@@ -96,14 +96,17 @@
 
 
 
-  <meta property="og:type" content="article">
+  <meta name="description" content="原型对象 将函数定义在全局作用域中污染命名空间，并且不安全  垃圾回收">
+<meta property="og:type" content="article">
 <meta property="og:title" content="周报">
-<meta property="og:url" content="http://yoursite.com/2019/06/04/zhoubao-5/index.html">
+<meta property="og:url" content="http://yoursite.com/2019/06/23/zhoubao-5/index.html">
 <meta property="og:site_name" content="卿歌">
+<meta property="og:description" content="原型对象 将函数定义在全局作用域中污染命名空间，并且不安全  垃圾回收">
 <meta property="og:locale" content="zh-cn">
-<meta property="og:updated_time" content="2019-06-04T12:14:24.029Z">
+<meta property="og:updated_time" content="2019-06-16T04:24:31.220Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="周报">
+<meta name="twitter:description" content="原型对象 将函数定义在全局作用域中污染命名空间，并且不安全  垃圾回收">
 
 
 
@@ -111,7 +114,7 @@
 
   
   
-  <link rel="canonical" href="http://yoursite.com/2019/06/04/zhoubao-5/">
+  <link rel="canonical" href="http://yoursite.com/2019/06/23/zhoubao-5/">
 
 
 
@@ -189,7 +192,7 @@
   </div>
 
   <div class="site-nav-toggle">
-    <button aria-label="Navigationsleiste an/ausschalten">
+    <button aria-label="Toggle navigation bar">
       <span class="btn-bar"></span>
       <span class="btn-bar"></span>
       <span class="btn-bar"></span>
@@ -337,7 +340,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/06/04/zhoubao-5/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/06/23/zhoubao-5/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="WangYuLin">
@@ -373,19 +376,31 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">Veröffentlicht am</span>
+                <span class="post-meta-item-text">Posted on</span>
               
 
               
                 
               
 
-              <time title="Erstellt: 2019-06-04 20:11:18 / Geändert am: 20:14:24" itemprop="dateCreated datePublished" datetime="2019-06-04T20:11:18+08:00">2019-06-04</time>
+              <time title="Created: 2019-06-23 20:11:18" itemprop="dateCreated datePublished" datetime="2019-06-23T20:11:18+08:00">2019-06-23</time>
             
 
             
               
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Edited on</span>
+                
+                <time title="Modified: 2019-06-16 12:24:31" itemprop="dateModified" datetime="2019-06-16T12:24:31+08:00">2019-06-16</time>
               
             
           </span>
@@ -419,7 +434,10 @@
       
 
       
-        
+        <h3 id="原型对象"><a href="#原型对象" class="headerlink" title="原型对象"></a>原型对象</h3><blockquote>
+<p>将函数定义在全局作用域中污染命名空间，并且不安全</p>
+</blockquote>
+<h3 id="垃圾回收"><a href="#垃圾回收" class="headerlink" title="垃圾回收"></a>垃圾回收</h3>
       
     </div>
 
@@ -449,8 +467,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/06/02/zhoubao-two/" rel="next" title="JS运算符和条件循环语句">
-                <i class="fa fa-chevron-left"></i> JS运算符和条件循环语句
+              <a href="/2019/06/16/zhoubao-4/" rel="next" title="对象和作用域">
+                <i class="fa fa-chevron-left"></i> 对象和作用域
               </a>
             
           </div>
@@ -458,10 +476,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/06/09/zhoubao-3/" rel="prev" title="对象和函数">
-                对象和函数 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -505,8 +519,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
 
-      <div class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <div class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -524,7 +547,7 @@
                   <a href="/archives">
                 
                     <span class="site-state-item-count">8</span>
-                    <span class="site-state-item-name">Artikel</span>
+                    <span class="site-state-item-name">posts</span>
                   </a>
                 </div>
               
@@ -614,6 +637,23 @@
       </div>
 
       
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#原型对象"><span class="nav-number">1.</span> <span class="nav-text">原型对象</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#垃圾回收"><span class="nav-number">2.</span> <span class="nav-text">垃圾回收</span></a></li></ol></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
+      
 
       
         <div class="back-to-top">
@@ -647,7 +687,7 @@
 </div>
 
 
-  <div class="powered-by">Erstellt mit  <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> v3.8.0</div>
+  <div class="powered-by">Powered by <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> v3.8.0</div>
 
 
 
@@ -655,7 +695,7 @@
 
 
 
-  <div class="theme-info">Design – <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a> v7.1.1</div>
+  <div class="theme-info">Theme – <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a> v7.1.1</div>
 
 
 
