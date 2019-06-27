@@ -96,17 +96,17 @@
 
 
 
-  <meta name="description" content="原型对象 将函数定义在全局作用域中污染命名空间，并且不安全  垃圾回收">
+  <meta name="description" content="原型对象 将函数定义在全局作用域中污染命名空间，并且不安全  prototype原型解析器向每个创建的函数中添加属性 prototype在普通函数中没有作用，在构造函数中创建的对象有一个隐含属性指向原型对象，通过__proto__来访问1234function fun()&amp;#123;&amp;#125;var m=new fun();console.log(m.__proto__ == fun.proto">
 <meta property="og:type" content="article">
 <meta property="og:title" content="周报">
 <meta property="og:url" content="http://yoursite.com/2019/06/23/zhoubao-5/index.html">
 <meta property="og:site_name" content="卿歌">
-<meta property="og:description" content="原型对象 将函数定义在全局作用域中污染命名空间，并且不安全  垃圾回收">
+<meta property="og:description" content="原型对象 将函数定义在全局作用域中污染命名空间，并且不安全  prototype原型解析器向每个创建的函数中添加属性 prototype在普通函数中没有作用，在构造函数中创建的对象有一个隐含属性指向原型对象，通过__proto__来访问1234function fun()&amp;#123;&amp;#125;var m=new fun();console.log(m.__proto__ == fun.proto">
 <meta property="og:locale" content="zh-cn">
-<meta property="og:updated_time" content="2019-06-16T04:24:31.220Z">
+<meta property="og:updated_time" content="2019-06-24T12:25:54.091Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="周报">
-<meta name="twitter:description" content="原型对象 将函数定义在全局作用域中污染命名空间，并且不安全  垃圾回收">
+<meta name="twitter:description" content="原型对象 将函数定义在全局作用域中污染命名空间，并且不安全  prototype原型解析器向每个创建的函数中添加属性 prototype在普通函数中没有作用，在构造函数中创建的对象有一个隐含属性指向原型对象，通过__proto__来访问1234function fun()&amp;#123;&amp;#125;var m=new fun();console.log(m.__proto__ == fun.proto">
 
 
 
@@ -192,7 +192,7 @@
   </div>
 
   <div class="site-nav-toggle">
-    <button aria-label="Toggle navigation bar">
+    <button aria-label="Navigationsleiste an/ausschalten">
       <span class="btn-bar"></span>
       <span class="btn-bar"></span>
       <span class="btn-bar"></span>
@@ -376,14 +376,14 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">Posted on</span>
+                <span class="post-meta-item-text">Veröffentlicht am</span>
               
 
               
                 
               
 
-              <time title="Created: 2019-06-23 20:11:18" itemprop="dateCreated datePublished" datetime="2019-06-23T20:11:18+08:00">2019-06-23</time>
+              <time title="Erstellt: 2019-06-23 20:11:18" itemprop="dateCreated datePublished" datetime="2019-06-23T20:11:18+08:00">2019-06-23</time>
             
 
             
@@ -398,9 +398,9 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 
-                  <span class="post-meta-item-text">Edited on</span>
+                  <span class="post-meta-item-text">Bearbeitet am</span>
                 
-                <time title="Modified: 2019-06-16 12:24:31" itemprop="dateModified" datetime="2019-06-16T12:24:31+08:00">2019-06-16</time>
+                <time title="Geändert am: 2019-06-24 20:25:54" itemprop="dateModified" datetime="2019-06-24T20:25:54+08:00">2019-06-24</time>
               
             
           </span>
@@ -437,6 +437,9 @@
         <h3 id="原型对象"><a href="#原型对象" class="headerlink" title="原型对象"></a>原型对象</h3><blockquote>
 <p>将函数定义在全局作用域中污染命名空间，并且不安全</p>
 </blockquote>
+<p>prototype原型<br>解析器向每个创建的函数中添加属性 prototype<br>在普通函数中没有作用，在构造函数中创建的对象有一个隐含属性指向原型对象，通过<code>__proto__</code>来访问<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">function fun()&#123;&#125;</span><br><span class="line">var m=new fun();</span><br><span class="line">console.log(m.__proto__ == fun.prototype);</span><br><span class="line">//true</span><br></pre></td></tr></table></figure></p>
+<p>可以将对象共有的内容（属性和方法）统一设置到原型对象中，不用分别为每一个对象添加，也不会影响全局作用域，就可以使每个对象都具有。<br>原型对象也是对象，它也有原型。没有原型的原型的原型。<br>查找属性，如果在函数中没有找到则到原型中寻找，如果没有继续到原型的原型中寻找，如果在Object中依然没有则返回undefined。</p>
+<p><code>对象.hasOwnProperty</code>  检查对象自身中是否含有该属性，只有当对象自身含有属性时才会返回true。在原型的原型里。</p>
 <h3 id="垃圾回收"><a href="#垃圾回收" class="headerlink" title="垃圾回收"></a>垃圾回收</h3>
       
     </div>
@@ -467,8 +470,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/06/16/zhoubao-4/" rel="next" title="对象和作用域">
-                <i class="fa fa-chevron-left"></i> 对象和作用域
+              <a href="/2019/06/17/zhoubao-6/" rel="next" title="zhoubao-6">
+                <i class="fa fa-chevron-left"></i> zhoubao-6
               </a>
             
           </div>
@@ -521,10 +524,10 @@
       
         <ul class="sidebar-nav motion-element">
           <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
-            Table of Contents
+            Inhaltsverzeichnis
           </li>
           <li class="sidebar-nav-overview" data-target="site-overview-wrap">
-            Overview
+            Übersicht
           </li>
         </ul>
       
@@ -546,8 +549,8 @@
                 
                   <a href="/archives">
                 
-                    <span class="site-state-item-count">8</span>
-                    <span class="site-state-item-name">posts</span>
+                    <span class="site-state-item-count">9</span>
+                    <span class="site-state-item-name">Artikel</span>
                   </a>
                 </div>
               
@@ -687,7 +690,7 @@
 </div>
 
 
-  <div class="powered-by">Powered by <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> v3.8.0</div>
+  <div class="powered-by">Erstellt mit  <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> v3.8.0</div>
 
 
 
@@ -695,7 +698,7 @@
 
 
 
-  <div class="theme-info">Theme – <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a> v7.1.1</div>
+  <div class="theme-info">Design – <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a> v7.1.1</div>
 
 
 
