@@ -337,7 +337,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/06/17/zhoubao-6/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/07/07/zhoubao-6/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="WangYuLin">
@@ -357,7 +357,7 @@
           <h1 class="post-title" itemprop="name headline">
                 
                 
-                <a href="/2019/06/17/zhoubao-6/" class="post-title-link" itemprop="url">zhoubao-6</a>
+                <a href="/2019/07/07/zhoubao-6/" class="post-title-link" itemprop="url">zhoubao-6</a>
               
             
           </h1>
@@ -382,9 +382,25 @@
                 
               
 
-              <time title="Erstellt: 2019-06-17 15:05:31" itemprop="dateCreated datePublished" datetime="2019-06-17T15:05:31+08:00">2019-06-17</time>
+              <time title="Erstellt: 2019-07-07 15:05:31" itemprop="dateCreated datePublished" datetime="2019-07-07T15:05:31+08:00">2019-07-07</time>
             
 
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Bearbeitet am</span>
+                
+                <time title="Geändert am: 2019-06-28 18:38:43" itemprop="dateModified" datetime="2019-06-28T18:38:43+08:00">2019-06-28</time>
+              
             
           </span>
 
@@ -419,7 +435,7 @@
       
         
           
-            
+            <h3 id="数组"><a href="#数组" class="headerlink" title="数组"></a>数组</h3>
           
         
       
@@ -475,7 +491,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/06/17/zhoubao-5/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/06/30/zhoubao-5/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="WangYuLin">
@@ -495,7 +511,7 @@
           <h1 class="post-title" itemprop="name headline">
                 
                 
-                <a href="/2019/06/17/zhoubao-5/" class="post-title-link" itemprop="url">原型和数组</a>
+                <a href="/2019/06/30/zhoubao-5/" class="post-title-link" itemprop="url">原型和数组</a>
               
             
           </h1>
@@ -520,7 +536,7 @@
                 
               
 
-              <time title="Erstellt: 2019-06-17 15:05:31" itemprop="dateCreated datePublished" datetime="2019-06-17T15:05:31+08:00">2019-06-17</time>
+              <time title="Erstellt: 2019-06-30 15:05:31" itemprop="dateCreated datePublished" datetime="2019-06-30T15:05:31+08:00">2019-06-30</time>
             
 
             
@@ -537,7 +553,7 @@
                 
                   <span class="post-meta-item-text">Bearbeitet am</span>
                 
-                <time title="Geändert am: 2019-06-28 18:13:37" itemprop="dateModified" datetime="2019-06-28T18:13:37+08:00">2019-06-28</time>
+                <time title="Geändert am: 2019-06-28 18:48:12" itemprop="dateModified" datetime="2019-06-28T18:48:12+08:00">2019-06-28</time>
               
             
           </span>
@@ -583,7 +599,12 @@
 <p>程序运行在会产生垃圾，当一个对象没有任何属性或者变量对它进行引用，则该对象将永远无法进行操作，此时就为一个垃圾。</p>
 </blockquote>
 <p>JS中有自动回收机制，会自动将垃圾对象从内存中销毁</p>
-<h3 id="数组"><a href="#数组" class="headerlink" title="数组"></a>数组</h3><p>Array 是对象 存储数据（数组的存储性能比普通对象好）<br>数组使用数字作为索引（index：从0开始的整数）操作元素<br>创建数组<code>var arr = new Array()</code>空数组<br>使用typrof检查数组返回object</p>
+<h3 id="数组"><a href="#数组" class="headerlink" title="数组"></a>数组</h3><p>Array 是对象 存储数据（数组的存储性能比普通对象好）<br>数组使用数字作为索引（index：从0开始的整数）操作元素<br>创建空数组<code>var arr = new Array()</code>构造函数、<code>var arr=[]</code>数组字面量（均可以在创建时指定元素）<br>使用typrof检查数组返回object<br>对于连续数组，使用length获取元素个数（长度）  <code>数组.length</code><br>arr=new Array(10)表示创建一个长度为10的数组<br>arr=[10]表示创建一个只有一个元素10的数组</p>
+<blockquote>
+<p>数组中元素可以是任意的数据类型，可以是对象，函数</p>
+</blockquote>
+<p><code>arr = [function(){alert(1)},function(){alert(2)}];
+arr[0]();</code>//1</p>
 
           
         
