@@ -189,7 +189,7 @@
   </div>
 
   <div class="site-nav-toggle">
-    <button aria-label="Navigationsleiste an/ausschalten">
+    <button aria-label="تغییر ناوبری">
       <span class="btn-bar"></span>
       <span class="btn-bar"></span>
       <span class="btn-bar"></span>
@@ -375,14 +375,14 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">Veröffentlicht am</span>
+                <span class="post-meta-item-text">نوشته شده در</span>
               
 
               
                 
               
 
-              <time title="Erstellt: 2019-07-16 15:05:31 / Geändert am: 15:00:53" itemprop="dateCreated datePublished" datetime="2019-07-16T15:05:31+08:00">2019-07-16</time>
+              <time title="ایجاد شده: 2019-07-16 15:05:31 / تغییر یافته: 18:01:24" itemprop="dateCreated datePublished" datetime="2019-07-16T15:05:31+08:00">2019-07-16</time>
             
 
             
@@ -423,7 +423,7 @@
       
         
           
-            <h3 id="JS中Date对象"><a href="#JS中Date对象" class="headerlink" title="JS中Date对象"></a>JS中Date对象</h3><blockquote>
+            <h2 id="JS中Date对象"><a href="#JS中Date对象" class="headerlink" title="JS中Date对象"></a>JS中Date对象</h2><blockquote>
 <p>用来表示时间</p>
 </blockquote>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">var date = new Date();</span><br><span class="line">console.log(date);</span><br></pre></td></tr></table></figure>
@@ -432,7 +432,7 @@
 <p>利用时间戳可以来测试代码的执行性能</p>
 </blockquote>
 <p><code>.setDate</code> <code>.setMonth</code> <code>.setFullYear</code>设置当前对象日期中的部分</p>
-<h3 id="DOM"><a href="#DOM" class="headerlink" title="DOM"></a>DOM</h3><blockquote>
+<h2 id="DOM文档对象模型"><a href="#DOM文档对象模型" class="headerlink" title="DOM文档对象模型"></a>DOM文档对象模型</h2><h3 id="document-querySelector"><a href="#document-querySelector" class="headerlink" title="document.querySelector"></a>document.querySelector</h3><blockquote>
 <p>element = document.querySelector(selectors);</p>
 </blockquote>
 <p>参数selectors：<br>包含一个或多个要匹配的选择器的 DOM字符串 DOMString。 该字符串必须是有效的CSS选择器字符串；如果不是，则引发SYNTAX_ERR异常。   使用反斜杠字符转义不属于标准CSS语法的字符。JavaScript使用退格转义，反斜杠是转义字符，所以当输入一个文本串时，必须将它转义两次（一次是为 JavaScript 字符串转义，另一次是为 querySelector 转义）：<br>返回值：<br>表示文档中与指定的一组CSS选择器匹配的第一个元素的 html元素Element对象。<br>如果需要与指定选择器匹配的所有元素的列表，则应该使用querySelectorAll() 。<br>异常SYNTAX_ERR：<br>指定selectors的语法无效。</p>
@@ -441,6 +441,53 @@
 </blockquote>
 <p>查找第一个匹配 class属性的html元素<br><code>var el = document.querySelector(&quot;.myclass&quot;);</code></p>
 <p>查找一个class属性为”user-panel main”的div(<code>&lt;div class=&quot;user-panel main&quot;&gt;</code>)内包含一个name属性为”login”的input (<code>&lt;input name=&quot;login&quot;/&gt;</code>)<br><code>var el = document.querySelector(&quot;div.user-panel.main input[name=&#39;login&#39;]&quot;);</code></p>
+<h3 id="document-getElementById-“idname”"><a href="#document-getElementById-“idname”" class="headerlink" title="document.getElementById(“idname”)"></a>document.getElementById(“idname”)</h3><p>获取元素ID，使用<code>innerHTML</code>方法改变内容</p>
+<h3 id="document-getElementByTagName"><a href="#document-getElementByTagName" class="headerlink" title="document.getElementByTagName"></a>document.getElementByTagName</h3><p>通过标签名字寻找到相同元素中的第一个，使用<code>要更改属性名</code>方法更改</p>
+<h3 id="document-write"><a href="#document-write" class="headerlink" title="document.write"></a>document.write</h3><p>直接输出内容<br>不要再文档加载完成之后使用，会覆盖该文档</p>
+<h3 id="通过DOM对象改变CSS"><a href="#通过DOM对象改变CSS" class="headerlink" title="通过DOM对象改变CSS"></a>通过DOM对象改变CSS</h3><p><code>document.getElementById(id).style.属性=new style</code></p>
+<h3 id="EventListener"><a href="#EventListener" class="headerlink" title="EventListener"></a>EventListener</h3><p><code>addEventListener()</code>方法用于向指定元素添加时间句柄<br><code>removeEventListener()</code>移除方法添加的事件句柄</p>
+<h2 id="节点Node"><a href="#节点Node" class="headerlink" title="节点Node"></a>节点Node</h2><p>网页中每一个部分都可以成为节点，构成网页的最基本的组成部分，分为四类</p>
+<table>
+<thead>
+<tr>
+<th>节点类型</th>
+<th>含义</th>
+<th>nodeName</th>
+<th>nodeType</th>
+<th>nodeValue</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>文档节点</td>
+<td>整个HTML文档</td>
+<td>#document</td>
+<td>9</td>
+<td>null</td>
+</tr>
+<tr>
+<td>元素节点</td>
+<td>HTML文档中的HTML标签</td>
+<td>标签名</td>
+<td>1</td>
+<td>null</td>
+</tr>
+<tr>
+<td>属性节点</td>
+<td>元素的属性</td>
+<td>属性名</td>
+<td>2</td>
+<td>属性值</td>
+</tr>
+<tr>
+<td>文本节点</td>
+<td>HTML标签中的文本内容</td>
+<td>#text</td>
+<td>3</td>
+<td>*文本内容</td>
+</tr>
+</tbody>
+</table>
 
           
         
@@ -535,14 +582,14 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">Veröffentlicht am</span>
+                <span class="post-meta-item-text">نوشته شده در</span>
               
 
               
                 
               
 
-              <time title="Erstellt: 2019-07-16 15:02:41" itemprop="dateCreated datePublished" datetime="2019-07-16T15:02:41+08:00">2019-07-16</time>
+              <time title="ایجاد شده: 2019-07-16 15:02:41" itemprop="dateCreated datePublished" datetime="2019-07-16T15:02:41+08:00">2019-07-16</time>
             
 
             
@@ -673,14 +720,14 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">Veröffentlicht am</span>
+                <span class="post-meta-item-text">نوشته شده در</span>
               
 
               
                 
               
 
-              <time title="Erstellt: 2019-06-30 15:05:31" itemprop="dateCreated datePublished" datetime="2019-06-30T15:05:31+08:00">2019-06-30</time>
+              <time title="ایجاد شده: 2019-06-30 15:05:31" itemprop="dateCreated datePublished" datetime="2019-06-30T15:05:31+08:00">2019-06-30</time>
             
 
             
@@ -695,9 +742,9 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 
-                  <span class="post-meta-item-text">Bearbeitet am</span>
+                  <span class="post-meta-item-text">ویرایش شده در</span>
                 
-                <time title="Geändert am: 2019-06-28 18:48:12" itemprop="dateModified" datetime="2019-06-28T18:48:12+08:00">2019-06-28</time>
+                <time title="تغییر یافته: 2019-06-28 18:48:12" itemprop="dateModified" datetime="2019-06-28T18:48:12+08:00">2019-06-28</time>
               
             
           </span>
@@ -843,14 +890,14 @@ arr[0]();</code>//1</p>
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">Veröffentlicht am</span>
+                <span class="post-meta-item-text">نوشته شده در</span>
               
 
               
                 
               
 
-              <time title="Erstellt: 2019-06-16 14:25:07 / Geändert am: 12:22:06" itemprop="dateCreated datePublished" datetime="2019-06-16T14:25:07+08:00">2019-06-16</time>
+              <time title="ایجاد شده: 2019-06-16 14:25:07 / تغییر یافته: 12:22:06" itemprop="dateCreated datePublished" datetime="2019-06-16T14:25:07+08:00">2019-06-16</time>
             
 
             
@@ -1027,14 +1074,14 @@ arr[0]();</code>//1</p>
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">Veröffentlicht am</span>
+                <span class="post-meta-item-text">نوشته شده در</span>
               
 
               
                 
               
 
-              <time title="Erstellt: 2019-06-09 00:00:00" itemprop="dateCreated datePublished" datetime="2019-06-09T00:00:00+08:00">2019-06-09</time>
+              <time title="ایجاد شده: 2019-06-09 00:00:00" itemprop="dateCreated datePublished" datetime="2019-06-09T00:00:00+08:00">2019-06-09</time>
             
 
             
@@ -1049,9 +1096,9 @@ arr[0]();</code>//1</p>
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 
-                  <span class="post-meta-item-text">Bearbeitet am</span>
+                  <span class="post-meta-item-text">ویرایش شده در</span>
                 
-                <time title="Geändert am: 2019-06-03 19:14:21" itemprop="dateModified" datetime="2019-06-03T19:14:21+08:00">2019-06-03</time>
+                <time title="تغییر یافته: 2019-06-03 19:14:21" itemprop="dateModified" datetime="2019-06-03T19:14:21+08:00">2019-06-03</time>
               
             
           </span>
@@ -1223,14 +1270,14 @@ arr[0]();</code>//1</p>
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">Veröffentlicht am</span>
+                <span class="post-meta-item-text">نوشته شده در</span>
               
 
               
                 
               
 
-              <time title="Erstellt: 2019-06-02 00:00:00" itemprop="dateCreated datePublished" datetime="2019-06-02T00:00:00+08:00">2019-06-02</time>
+              <time title="ایجاد شده: 2019-06-02 00:00:00" itemprop="dateCreated datePublished" datetime="2019-06-02T00:00:00+08:00">2019-06-02</time>
             
 
             
@@ -1245,9 +1292,9 @@ arr[0]();</code>//1</p>
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 
-                  <span class="post-meta-item-text">Bearbeitet am</span>
+                  <span class="post-meta-item-text">ویرایش شده در</span>
                 
-                <time title="Geändert am: 2019-05-30 15:56:47" itemprop="dateModified" datetime="2019-05-30T15:56:47+08:00">2019-05-30</time>
+                <time title="تغییر یافته: 2019-05-30 15:56:47" itemprop="dateModified" datetime="2019-05-30T15:56:47+08:00">2019-05-30</time>
               
             
           </span>
@@ -1415,14 +1462,14 @@ arr[0]();</code>//1</p>
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">Veröffentlicht am</span>
+                <span class="post-meta-item-text">نوشته شده در</span>
               
 
               
                 
               
 
-              <time title="Erstellt: 2019-05-26 00:00:00 / Geändert am: 17:23:39" itemprop="dateCreated datePublished" datetime="2019-05-26T00:00:00+08:00">2019-05-26</time>
+              <time title="ایجاد شده: 2019-05-26 00:00:00 / تغییر یافته: 17:23:39" itemprop="dateCreated datePublished" datetime="2019-05-26T00:00:00+08:00">2019-05-26</time>
             
 
             
@@ -1601,14 +1648,14 @@ arr[0]();</code>//1</p>
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">Veröffentlicht am</span>
+                <span class="post-meta-item-text">نوشته شده در</span>
               
 
               
                 
               
 
-              <time title="Erstellt: 2019-05-19 00:00:00" itemprop="dateCreated datePublished" datetime="2019-05-19T00:00:00+08:00">2019-05-19</time>
+              <time title="ایجاد شده: 2019-05-19 00:00:00" itemprop="dateCreated datePublished" datetime="2019-05-19T00:00:00+08:00">2019-05-19</time>
             
 
             
@@ -1623,9 +1670,9 @@ arr[0]();</code>//1</p>
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 
-                  <span class="post-meta-item-text">Bearbeitet am</span>
+                  <span class="post-meta-item-text">ویرایش شده در</span>
                 
-                <time title="Geändert am: 2019-05-26 17:23:17" itemprop="dateModified" datetime="2019-05-26T17:23:17+08:00">2019-05-26</time>
+                <time title="تغییر یافته: 2019-05-26 17:23:17" itemprop="dateModified" datetime="2019-05-26T17:23:17+08:00">2019-05-26</time>
               
             
           </span>
@@ -1793,14 +1840,14 @@ arr[0]();</code>//1</p>
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">Veröffentlicht am</span>
+                <span class="post-meta-item-text">نوشته شده در</span>
               
 
               
                 
               
 
-              <time title="Erstellt: 2019-05-08 15:55:18" itemprop="dateCreated datePublished" datetime="2019-05-08T15:55:18+08:00">2019-05-08</time>
+              <time title="ایجاد شده: 2019-05-08 15:55:18" itemprop="dateCreated datePublished" datetime="2019-05-08T15:55:18+08:00">2019-05-08</time>
             
 
             
@@ -1815,9 +1862,9 @@ arr[0]();</code>//1</p>
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 
-                  <span class="post-meta-item-text">Bearbeitet am</span>
+                  <span class="post-meta-item-text">ویرایش شده در</span>
                 
-                <time title="Geändert am: 2019-05-09 17:28:46" itemprop="dateModified" datetime="2019-05-09T17:28:46+08:00">2019-05-09</time>
+                <time title="تغییر یافته: 2019-05-09 17:28:46" itemprop="dateModified" datetime="2019-05-09T17:28:46+08:00">2019-05-09</time>
               
             
           </span>
@@ -1956,14 +2003,14 @@ arr[0]();</code>//1</p>
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">Veröffentlicht am</span>
+                <span class="post-meta-item-text">نوشته شده در</span>
               
 
               
                 
               
 
-              <time title="Erstellt: 2019-01-01 00:00:00" itemprop="dateCreated datePublished" datetime="2019-01-01T00:00:00+08:00">2019-01-01</time>
+              <time title="ایجاد شده: 2019-01-01 00:00:00" itemprop="dateCreated datePublished" datetime="2019-01-01T00:00:00+08:00">2019-01-01</time>
             
 
             
@@ -1978,9 +2025,9 @@ arr[0]();</code>//1</p>
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 
-                  <span class="post-meta-item-text">Bearbeitet am</span>
+                  <span class="post-meta-item-text">ویرایش شده در</span>
                 
-                <time title="Geändert am: 2019-06-27 09:03:07" itemprop="dateModified" datetime="2019-06-27T09:03:07+08:00">2019-06-27</time>
+                <time title="تغییر یافته: 2019-06-27 09:03:07" itemprop="dateModified" datetime="2019-06-27T09:03:07+08:00">2019-06-27</time>
               
             
           </span>
@@ -2102,7 +2149,7 @@ arr[0]();</code>//1</p>
                   <a href="/archives">
                 
                     <span class="site-state-item-count">10</span>
-                    <span class="site-state-item-name">Artikel</span>
+                    <span class="site-state-item-name">پست ها</span>
                   </a>
                 </div>
               
@@ -2225,7 +2272,7 @@ arr[0]();</code>//1</p>
 </div>
 
 
-  <div class="powered-by">Erstellt mit  <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> v3.8.0</div>
+  <div class="powered-by">قدرت گرفته از <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> v3.8.0</div>
 
 
 
@@ -2233,7 +2280,7 @@ arr[0]();</code>//1</p>
 
 
 
-  <div class="theme-info">Design – <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a> v7.1.1</div>
+  <div class="theme-info">پوسته – <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a> v7.1.1</div>
 
 
 
