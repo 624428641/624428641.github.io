@@ -337,6 +337,160 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/07/19/ribao-2/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="WangYuLin">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="卿歌">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/2019/07/19/ribao-2/" class="post-title-link" itemprop="url">第三天</a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Veröffentlicht am</span>
+              
+
+              
+                
+              
+
+              <time title="Erstellt: 2019-07-19 19:18:18" itemprop="dateCreated datePublished" datetime="2019-07-19T19:18:18+08:00">2019-07-19</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Bearbeitet am</span>
+                
+                <time title="Geändert am: 2019-07-18 18:47:30" itemprop="dateModified" datetime="2019-07-18T18:47:30+08:00">2019-07-18</time>
+              
+            
+          </span>
+
+          
+
+          
+            
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/07/18/ribao-1/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -382,7 +536,7 @@
                 
               
 
-              <time title="Erstellt: 2019-07-18 15:02:41 / Geändert am: 15:54:36" itemprop="dateCreated datePublished" datetime="2019-07-18T15:02:41+08:00">2019-07-18</time>
+              <time title="Erstellt: 2019-07-18 15:02:41 / Geändert am: 19:07:53" itemprop="dateCreated datePublished" datetime="2019-07-18T15:02:41+08:00">2019-07-18</time>
             
 
             
@@ -423,7 +577,7 @@
       
         
           
-            <p>Event 对象<br>Select 对象<br>Document 对象<br>Array 对象</p>
+            <p><del>Event 对象<br>Select 对象<br>Document 对象</del></p>
 <h2 id="高阶函数"><a href="#高阶函数" class="headerlink" title="高阶函数"></a>高阶函数</h2><blockquote>
 <p>函数指向某个变量，函数的参数接收变量，高阶函数就是一个函数就收另一个函数作为参数</p>
 </blockquote>
@@ -439,8 +593,30 @@
 <li>findIndex()查找符合条件的第一个元素,返回这个元素的索引，如果没有找到，返回-1</li>
 <li>forEach()把每个元素依次作用于传入的函数，但不会返回新的数组。常用于遍历数组，传入的函数不需要返回值</li>
 </ol>
-<h3 id="闭包"><a href="#闭包" class="headerlink" title="闭包"></a>闭包</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">function count() &#123;</span><br><span class="line">    var arr = [];</span><br><span class="line">    for (var i=1; i&lt;=3; i++) &#123;</span><br><span class="line">        arr.push(function () &#123;</span><br><span class="line">            return i * i;</span><br><span class="line">        &#125;);</span><br><span class="line">    &#125;</span><br><span class="line">    return arr;</span><br><span class="line">&#125;</span><br><span class="line">var results = count();</span><br><span class="line">var f1 = results[0];//16</span><br><span class="line">var f2 = results[1];//16</span><br><span class="line">var f3 = results[2];//16</span><br></pre></td></tr></table></figure>
-<p>返回的函数引用了变量i，但它并非立刻执行。等到3个函数都返回时，它们所引用的变量i已经变成了4<br><code>返回函数不要引用任何循环变量，或者后续会发生变化的变量</code></p>
+<h3 id="闭包"><a href="#闭包" class="headerlink" title="闭包"></a>闭包</h3><blockquote>
+<p>函数和声明该函数的词法环境的组合</p>
+</blockquote>
+<p>闭包是由函数以及创建该函数的词法环境组合而成。这个环境包含了这个闭包创建时所能访问的所有局部变量<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">function count() &#123;</span><br><span class="line">    var arr = [];</span><br><span class="line">    for (var i=1; i&lt;=3; i++) &#123;</span><br><span class="line">        arr.push(function () &#123;</span><br><span class="line">            return i * i;</span><br><span class="line">        &#125;);</span><br><span class="line">    &#125;</span><br><span class="line">    return arr;</span><br><span class="line">&#125;</span><br><span class="line">var results = count();</span><br><span class="line">var f1 = results[0];//16</span><br><span class="line">var f2 = results[1];//16</span><br><span class="line">var f3 = results[2];//16</span><br></pre></td></tr></table></figure></p>
+<p>返回的函数引用了变量i，但它并非立刻执行。等到3个函数都返回时，它们所引用的变量i已经变成了4<br><code>返回函数不要引用任何循环变量，或者后续会发生变化的变量</code><br>闭包就是携带状态的函数，并且它的状态可以完全对外隐藏起来。</p>
+<h3 id="箭头函数"><a href="#箭头函数" class="headerlink" title="箭头函数"></a>箭头函数</h3><p><code>x =&gt; x * x</code> 相当于 <code>function (x) { return x * x;}</code><br>箭头函数相当于匿名函数，并且简化了函数定义，箭头函数内部的this是词法作用域，由上下文确定<br>用call()或者apply()调用箭头函数时，无法对this进行绑定，即传入的第一个参数被忽略</p>
+<h2 id="Array对象"><a href="#Array对象" class="headerlink" title="Array对象"></a>Array对象</h2><blockquote>
+<p>用于在单个的变量中存储多个值</p>
+</blockquote>
+<p>如果参数只有一个为其长度，多个为值，没有参数的数组为空长度0<br>方法：<br>不改变原数组：</p>
+<ul>
+<li>concat() 连接两个或多个数组</li>
+<li>reverse() 方法用于颠倒数组中元素的顺序</li>
+<li>join() 方法用于把数组中的所有元素放入一个字符串，返回一个字符串。</li>
+<li>slice() 方法可从已有的数组中返回选定的元素，又两个参数，开始结束地方</li>
+</ul>
+<p>改变原数组：</p>
+<ul>
+<li>pop() 方法用于删除并返回数组的最后一个元素，数组长度减 1，返回它删除的元素的值。如果数组已经为空，则 pop() 不改变数组，并返回undefined。</li>
+<li>push() 方法可向数组的末尾添加一个或多个元素，并返回新的长度，直接修改 arrayObject</li>
+<li>shift() 方法用于把数组的第一个元素从其中删除，并返回第一个元素的值</li>
+<li>splice() 方法对数组惊醒添加或者删除项目操作，然后返回被删除的项目</li>
+<li>unshift() 方法可向数组的开头添加一个或更多元素，并返回新的长度</li>
+</ul>
 
           
         
@@ -543,144 +719,6 @@
               
 
               <time title="Erstellt: 2019-07-16 19:18:50" itemprop="dateCreated datePublished" datetime="2019-07-16T19:18:50+08:00">2019-07-16</time>
-            
-
-            
-          </span>
-
-          
-
-          
-            
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            
-          
-        
-      
-    </div>
-
-    
-
-    
-    
-    
-
-    
-
-    
-      
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/07/16/ribao-2/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="WangYuLin">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/avatar.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="卿歌">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/2019/07/16/ribao-2/" class="post-title-link" itemprop="url">ribao-2</a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Veröffentlicht am</span>
-              
-
-              
-                
-              
-
-              <time title="Erstellt: 2019-07-16 19:18:18" itemprop="dateCreated datePublished" datetime="2019-07-16T19:18:18+08:00">2019-07-16</time>
             
 
             
