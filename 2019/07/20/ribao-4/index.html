@@ -96,14 +96,17 @@
 
 
 
-  <meta property="og:type" content="article">
-<meta property="og:title" content="ribao-4">
-<meta property="og:url" content="http://yoursite.com/2019/07/18/ribao-4/index.html">
+  <meta name="description" content="异步的JS和XML，是一种技术  客户端发起请求，服务器端处理响应，之后客户端页面载入=&amp;gt;同步客户端发起请求，服务器端处理响应，同时客户端页面载入=&amp;gt;异步  new XMLHttpRequest()HTTP请求无状态协议，不建立持久的连接组成：方法或动作，URL，头（客户端环境，身份验证），体（头和体中间有空行） GET  用于信息查询获取，信息对任何人可见，数量限制在2000个字符，">
+<meta property="og:type" content="article">
+<meta property="og:title" content="AJAX">
+<meta property="og:url" content="http://yoursite.com/2019/07/20/ribao-4/index.html">
 <meta property="og:site_name" content="卿歌">
+<meta property="og:description" content="异步的JS和XML，是一种技术  客户端发起请求，服务器端处理响应，之后客户端页面载入=&amp;gt;同步客户端发起请求，服务器端处理响应，同时客户端页面载入=&amp;gt;异步  new XMLHttpRequest()HTTP请求无状态协议，不建立持久的连接组成：方法或动作，URL，头（客户端环境，身份验证），体（头和体中间有空行） GET  用于信息查询获取，信息对任何人可见，数量限制在2000个字符，">
 <meta property="og:locale" content="zh-cn">
-<meta property="og:updated_time" content="2019-07-18T11:10:07.952Z">
+<meta property="og:updated_time" content="2019-07-20T07:13:31.842Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="ribao-4">
+<meta name="twitter:title" content="AJAX">
+<meta name="twitter:description" content="异步的JS和XML，是一种技术  客户端发起请求，服务器端处理响应，之后客户端页面载入=&amp;gt;同步客户端发起请求，服务器端处理响应，同时客户端页面载入=&amp;gt;异步  new XMLHttpRequest()HTTP请求无状态协议，不建立持久的连接组成：方法或动作，URL，头（客户端环境，身份验证），体（头和体中间有空行） GET  用于信息查询获取，信息对任何人可见，数量限制在2000个字符，">
 
 
 
@@ -111,7 +114,7 @@
 
   
   
-  <link rel="canonical" href="http://yoursite.com/2019/07/18/ribao-4/">
+  <link rel="canonical" href="http://yoursite.com/2019/07/20/ribao-4/">
 
 
 
@@ -121,7 +124,7 @@
   };
 </script>
 
-  <title>ribao-4 | 卿歌</title>
+  <title>AJAX | 卿歌</title>
   
 
 
@@ -337,7 +340,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/07/18/ribao-4/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/07/20/ribao-4/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="WangYuLin">
@@ -354,7 +357,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">ribao-4
+          <h1 class="post-title" itemprop="name headline">AJAX
 
               
             
@@ -380,9 +383,13 @@
                 
               
 
-              <time title="Erstellt: 2019-07-18 19:10:07" itemprop="dateCreated datePublished" datetime="2019-07-18T19:10:07+08:00">2019-07-18</time>
+              <time title="Erstellt: 2019-07-20 19:10:07 / Geändert am: 15:13:31" itemprop="dateCreated datePublished" datetime="2019-07-20T19:10:07+08:00">2019-07-20</time>
             
 
+            
+              
+
+              
             
           </span>
 
@@ -415,7 +422,52 @@
       
 
       
-        
+        <p>异步的JS和XML，是一种技术</p>
+<blockquote>
+<p>客户端发起请求，服务器端处理响应，之后客户端页面载入=&gt;同步<br>客户端发起请求，服务器端处理响应，同时客户端页面载入=&gt;异步</p>
+</blockquote>
+<p><code>new XMLHttpRequest()</code><br>HTTP请求<br>无状态协议，不建立持久的连接<br>组成：方法或动作，URL，头（客户端环境，身份验证），体（头和体中间有空行）</p>
+<p>GET  用于信息查询获取，信息对任何人可见，数量限制在2000个字符，幂等<br>POST  用于新建删除修改，发送表单数据，无数量限制，<br>HTTP响应组成：状态码（数字文字显示是否成功），头（服务器信息），体</p>
+<blockquote>
+<p>状态码：1XX正在处理，2XX成功，3XX重定向，没成功，4XX客户端错误，5XX服务器错误</p>
+</blockquote>
+<p>发送请求方法：<br><code>open(method,url,async)</code> async判断异步<br><code>setRequestHeader()</code> 设置头信息，当method为post写在中间<br><code>send(string)</code></p>
+<p>取得响应：<br><code>reponseText</code> 字符串形式<br><code>reponseXML</code>  XML形式<br><code>status/statusText</code>  返回状态码<br><code>getAllResponseHeader</code>  获取所有响应报头<br><code>getReaponseHeader</code>  某个字段的值<br><code>readyState</code>属性 </p>
+<table>
+<thead>
+<tr>
+<th>属性显示</th>
+<th>作用</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>open未调用</td>
+</tr>
+<tr>
+<td>1</td>
+<td>连接已建立</td>
+</tr>
+<tr>
+<td>2</td>
+<td>请求已接收</td>
+</tr>
+<tr>
+<td>3</td>
+<td>请求处理中</td>
+</tr>
+<tr>
+<td>4</td>
+<td>响应完成</td>
+</tr>
+</tbody>
+</table>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">var request = new XMLHttpRequest();</span><br><span class="line">request.open(&quot;GET&quot;,&quot;get.php&quot;,&quot;true&quot;);</span><br><span class="line">request.send();</span><br><span class="line">request.onreadystatechange = function()&#123;</span><br><span class="line">	if(request.readyState===4&amp;&amp;request.state===200)&#123;</span><br><span class="line">		(request.resonseText)</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="PHP"><a href="#PHP" class="headerlink" title="PHP"></a>PHP</h2><blockquote>
+<p>创建动态交互性站点的服务器端脚本语言</p>
+</blockquote>
+
       
     </div>
 
@@ -445,8 +497,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/07/18/ribao-1/" rel="next" title="第二天">
-                <i class="fa fa-chevron-left"></i> 第二天
+              <a href="/2019/07/19/ribao-2/" rel="next" title="第三天">
+                <i class="fa fa-chevron-left"></i> 第三天
               </a>
             
           </div>
@@ -454,10 +506,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/07/19/ribao-2/" rel="prev" title="第三天">
-                第三天 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -501,8 +549,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Inhaltsverzeichnis
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Übersicht
+          </li>
+        </ul>
+      
 
-      <div class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <div class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -609,6 +666,23 @@
         </div>
       </div>
 
+      
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#PHP"><span class="nav-number">1.</span> <span class="nav-text">PHP</span></a></li></ol></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
       
 
       
