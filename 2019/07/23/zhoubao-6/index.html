@@ -98,14 +98,14 @@
 
   <meta name="description" content="JS中Date对象 用来表示时间  12var date = new Date();console.log(date); 该代码会直接封装为当前代码执行时间，如果创建一个指定日期的时间对象，需要在构造函数中传递一个表示时间的字符串（月/日/年 时：分：秒）作为参数方法：.getDate()获取当前对象日期的日.getMonth()获取当前对象日期的月（0表示1月）.getFullYear()获取当">
 <meta property="og:type" content="article">
-<meta property="og:title" content="第一天">
-<meta property="og:url" content="http://yoursite.com/2019/07/16/zhoubao-6/index.html">
+<meta property="og:title" content="第一周">
+<meta property="og:url" content="http://yoursite.com/2019/07/23/zhoubao-6/index.html">
 <meta property="og:site_name" content="卿歌">
 <meta property="og:description" content="JS中Date对象 用来表示时间  12var date = new Date();console.log(date); 该代码会直接封装为当前代码执行时间，如果创建一个指定日期的时间对象，需要在构造函数中传递一个表示时间的字符串（月/日/年 时：分：秒）作为参数方法：.getDate()获取当前对象日期的日.getMonth()获取当前对象日期的月（0表示1月）.getFullYear()获取当">
 <meta property="og:locale" content="zh-cn">
-<meta property="og:updated_time" content="2019-07-16T11:08:38.915Z">
+<meta property="og:updated_time" content="2019-07-23T02:57:19.052Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="第一天">
+<meta name="twitter:title" content="第一周">
 <meta name="twitter:description" content="JS中Date对象 用来表示时间  12var date = new Date();console.log(date); 该代码会直接封装为当前代码执行时间，如果创建一个指定日期的时间对象，需要在构造函数中传递一个表示时间的字符串（月/日/年 时：分：秒）作为参数方法：.getDate()获取当前对象日期的日.getMonth()获取当前对象日期的月（0表示1月）.getFullYear()获取当">
 
 
@@ -114,7 +114,7 @@
 
   
   
-  <link rel="canonical" href="http://yoursite.com/2019/07/16/zhoubao-6/">
+  <link rel="canonical" href="http://yoursite.com/2019/07/23/zhoubao-6/">
 
 
 
@@ -124,7 +124,7 @@
   };
 </script>
 
-  <title>第一天 | 卿歌</title>
+  <title>第一周 | 卿歌</title>
   
 
 
@@ -340,7 +340,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/07/16/zhoubao-6/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/07/23/zhoubao-6/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="WangYuLin">
@@ -357,7 +357,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">第一天
+          <h1 class="post-title" itemprop="name headline">第一周
 
               
             
@@ -383,7 +383,7 @@
                 
               
 
-              <time title="Erstellt: 2019-07-16 19:08:00 / Geändert am: 19:08:38" itemprop="dateCreated datePublished" datetime="2019-07-16T19:08:00+08:00">2019-07-16</time>
+              <time title="Erstellt: 2019-07-23 19:08:00 / Geändert am: 10:57:19" itemprop="dateCreated datePublished" datetime="2019-07-23T19:08:00+08:00">2019-07-23</time>
             
 
             
@@ -487,6 +487,141 @@
 </tr>
 </tbody>
 </table>
+<h2 id="高阶函数"><a href="#高阶函数" class="headerlink" title="高阶函数"></a>高阶函数</h2><blockquote>
+<p>函数指向某个变量，函数的参数接收变量，高阶函数就是一个函数就收另一个函数作为参数</p>
+</blockquote>
+<p>简单高阶函数<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">function add(x,y,f)&#123;</span><br><span class="line">	return f(x) + f(y);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h3 id="Array数组中的高阶函数"><a href="#Array数组中的高阶函数" class="headerlink" title="Array数组中的高阶函数"></a>Array数组中的高阶函数</h3><ol>
+<li>map()方法传入自己写的函数本身作为参数，得到了新的Array，可以有3个参数：callback(currentValue, index, array)</li>
+<li>reduce（）把一个函数作用在数组上，这个函数必须接收两个参数，把结果继续和下一个元素做计算</li>
+<li>filter()用于把某些元素过滤，返回剩下元素，接收一个函数作为参数，返回值是TRUE保留元素。还可以接收另外两个参数（元素的位置，数组本身）</li>
+<li>indexOf()方法返回在数组中可以找到一个给定元素的第一个索引，如果不存在，则返回-1</li>
+<li>sort()方法是用于排序的，字符串根据ASCII码进行排序，默认把所有元素先转换为String再排序。可以接收一个比较函数来实现自定义的排序，会直接对Array进行修改</li>
+<li>every()方法可以判断数组的所有元素是否满足测试条件</li>
+<li>find()方法用于查找符合条件的第一个元素，如果找到了，返回这个元素，否则，返回undefined</li>
+<li>findIndex()查找符合条件的第一个元素,返回这个元素的索引，如果没有找到，返回-1</li>
+<li>forEach()把每个元素依次作用于传入的函数，但不会返回新的数组。常用于遍历数组，传入的函数不需要返回值</li>
+</ol>
+<h3 id="闭包"><a href="#闭包" class="headerlink" title="闭包"></a>闭包</h3><blockquote>
+<p>函数和声明该函数的词法环境的组合</p>
+</blockquote>
+<p>闭包是由函数以及创建该函数的词法环境组合而成。这个环境包含了这个闭包创建时所能访问的所有局部变量<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">function count() &#123;</span><br><span class="line">    var arr = [];</span><br><span class="line">    for (var i=1; i&lt;=3; i++) &#123;</span><br><span class="line">        arr.push(function () &#123;</span><br><span class="line">            return i * i;</span><br><span class="line">        &#125;);</span><br><span class="line">    &#125;</span><br><span class="line">    return arr;</span><br><span class="line">&#125;</span><br><span class="line">var results = count();</span><br><span class="line">var f1 = results[0];//16</span><br><span class="line">var f2 = results[1];//16</span><br><span class="line">var f3 = results[2];//16</span><br></pre></td></tr></table></figure></p>
+<p>返回的函数引用了变量i，但它并非立刻执行。等到3个函数都返回时，它们所引用的变量i已经变成了4<br><code>返回函数不要引用任何循环变量，或者后续会发生变化的变量</code><br>闭包就是携带状态的函数，并且它的状态可以完全对外隐藏起来。</p>
+<h3 id="箭头函数"><a href="#箭头函数" class="headerlink" title="箭头函数"></a>箭头函数</h3><p><code>x =&gt; x * x</code> 相当于 <code>function (x) { return x * x;}</code><br>箭头函数相当于匿名函数，并且简化了函数定义，箭头函数内部的this是词法作用域，由上下文确定<br>用call()或者apply()调用箭头函数时，无法对this进行绑定，即传入的第一个参数被忽略</p>
+<h2 id="Array对象"><a href="#Array对象" class="headerlink" title="Array对象"></a>Array对象</h2><blockquote>
+<p>用于在单个的变量中存储多个值</p>
+</blockquote>
+<p>如果参数只有一个为其长度，多个为值，没有参数的数组为空长度0<br>方法：<br>不改变原数组：</p>
+<ul>
+<li>concat() 连接两个或多个数组</li>
+<li>reverse() 方法用于颠倒数组中元素的顺序</li>
+<li>join() 方法用于把数组中的所有元素放入一个字符串，返回一个字符串。</li>
+<li>slice() 方法可从已有的数组中返回选定的元素，又两个参数，开始结束地方</li>
+</ul>
+<p>改变原数组：</p>
+<ul>
+<li>pop() 方法用于删除并返回数组的最后一个元素，数组长度减 1，返回它删除的元素的值。如果数组已经为空，则 pop() 不改变数组，并返回undefined。</li>
+<li>push() 方法可向数组的末尾添加一个或多个元素，并返回新的长度，直接修改 arrayObject</li>
+<li>shift() 方法用于把数组的第一个元素从其中删除，并返回第一个元素的值</li>
+<li>splice() 方法对数组惊醒添加或者删除项目操作，然后返回被删除的项目</li>
+<li>unshift() 方法可向数组的开头添加一个或更多元素，并返回新的长度</li>
+</ul>
+<p><code>Math.ceil()</code>向上取整</p>
+<h2 id="CSS伪类"><a href="#CSS伪类" class="headerlink" title="CSS伪类"></a>CSS伪类</h2><h3 id="nth-child伪类"><a href="#nth-child伪类" class="headerlink" title=":nth-child伪类"></a>:nth-child伪类</h3><blockquote>
+<p>首先找到所有当前元素的兄弟元素，然后按照位置先后顺序从1开始排序，选择的结果为第（an+b）个元素的集合</p>
+</blockquote>
+<p>2n+1匹配位置为1、3、5、7…的元素。可以使用关键字<code>odd</code>来替换此表达式<br>2n+0或简单的2n匹配位置为2、4、6、8…的元素。可以使用关键字<code>even</code>来替换此表达式。</p>
+<h3 id="hover伪类"><a href="#hover伪类" class="headerlink" title=":hover伪类"></a>:hover伪类</h3><blockquote>
+<p>适用于用户使用指示设备虚指一个元素（没有激活它）的情况。这个样式会被任何与链接相关的伪类重写。可以任何伪元素上使用。会在光标（鼠标指针）悬停在元素上时提供关联的样式。</p>
+</blockquote>
+<p>为了确保生效，按照LVHA的循顺序声明<code>:link :visited :hover :active</code></p>
+<h3 id="focus伪类"><a href="#focus伪类" class="headerlink" title=":focus伪类"></a>:focus伪类</h3><blockquote>
+<p>focus表示获得焦点的元素（如表单输入）。当用户点击或触摸元素或通过键盘的 “tab” 键选择它时会被触发。</p>
+</blockquote>
+<p>此伪类仅适用于焦点元素本身。如果要选择包含焦点元素的元素，请使用:focus-within 。</p>
+<h2 id="lt-select-gt-元素"><a href="#lt-select-gt-元素" class="headerlink" title="&lt;select&gt; 元素"></a><code>&lt;select&gt;</code> 元素</h2><p>表示一个控件，提供一个选项菜单<br>菜单内的选项为<code>&lt;option&gt;</code>, 可以由<code>&lt;optgroup&gt;</code>元素分组。选项可以被用户预先选择。<br>属性：</p>
+<table>
+<thead>
+<tr>
+<th>属性名</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>autocomplete</td>
+</tr>
+<tr>
+<td>autofocus</td>
+</tr>
+<tr>
+<td>disabled</td>
+</tr>
+<tr>
+<td>form</td>
+</tr>
+<tr>
+<td>multiple</td>
+</tr>
+<tr>
+<td>name</td>
+</tr>
+<tr>
+<td>required</td>
+</tr>
+<tr>
+<td>size</td>
+</tr>
+</tbody>
+</table>
+<h2 id="Event-对象"><a href="#Event-对象" class="headerlink" title="Event 对象"></a>Event 对象</h2><blockquote>
+<p>在 HTML DOM 中，Element 对象表示 HTML 元素，拥有类型为元素节点、文本节点、注释节点的子节点</p>
+</blockquote>
+<p>Node.appendChild()方法将一个节点添加到指定父节点的子节点列表末尾</p>
+<h2 id="AJAX"><a href="#AJAX" class="headerlink" title="AJAX"></a>AJAX</h2><p>异步的JS和XML，是一种技术</p>
+<blockquote>
+<p>客户端发起请求，服务器端处理响应，之后客户端页面载入=&gt;同步<br>客户端发起请求，服务器端处理响应，同时客户端页面载入=&gt;异步</p>
+</blockquote>
+<p><code>new XMLHttpRequest()</code><br>HTTP请求<br>无状态协议，不建立持久的连接<br>组成：方法或动作，URL，头（客户端环境，身份验证），体（头和体中间有空行）</p>
+<p>GET  用于信息查询获取，信息对任何人可见，数量限制在2000个字符，幂等<br>POST  用于新建删除修改，发送表单数据，无数量限制，<br>HTTP响应组成：状态码（数字文字显示是否成功），头（服务器信息），体</p>
+<blockquote>
+<p>状态码：1XX正在处理，2XX成功，3XX重定向，没成功，4XX客户端错误，5XX服务器错误</p>
+</blockquote>
+<p>发送请求方法：<br><code>open(method,url,async)</code> async判断异步<br><code>setRequestHeader()</code> 设置头信息，当method为post写在中间<br><code>send(string)</code></p>
+<p>取得响应：<br><code>reponseText</code> 字符串形式<br><code>reponseXML</code>  XML形式<br><code>status/statusText</code>  返回状态码<br><code>getAllResponseHeader</code>  获取所有响应报头<br><code>getReaponseHeader</code>  某个字段的值<br><code>readyState</code>属性 </p>
+<table>
+<thead>
+<tr>
+<th>属性显示</th>
+<th>作用</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>open未调用</td>
+</tr>
+<tr>
+<td>1</td>
+<td>连接已建立</td>
+</tr>
+<tr>
+<td>2</td>
+<td>请求已接收</td>
+</tr>
+<tr>
+<td>3</td>
+<td>请求处理中</td>
+</tr>
+<tr>
+<td>4</td>
+<td>响应完成</td>
+</tr>
+</tbody>
+</table>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">var request = new XMLHttpRequest();</span><br><span class="line">request.open(&quot;GET&quot;,&quot;get.php&quot;,&quot;true&quot;);</span><br><span class="line">request.send();</span><br><span class="line">request.onreadystatechange = function()&#123;</span><br><span class="line">	if(request.readyState===4&amp;&amp;request.state===200)&#123;</span><br><span class="line">		(request.resonseText)</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="PHP"><a href="#PHP" class="headerlink" title="PHP"></a>PHP</h2><blockquote>
+<p>创建动态交互性站点的服务器端脚本语言，开源，免费</p>
+</blockquote>
 
       
     </div>
@@ -517,8 +652,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/06/30/zhoubao-5/" rel="next" title="原型和数组">
-                <i class="fa fa-chevron-left"></i> 原型和数组
+              <a href="/2019/07/20/ribao-4/" rel="next" title="AJAX">
+                <i class="fa fa-chevron-left"></i> AJAX
               </a>
             
           </div>
@@ -526,10 +661,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/07/16/ribao-3/" rel="prev" title="jQuery">
-                jQuery <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -701,7 +832,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#JS中Date对象"><span class="nav-number">1.</span> <span class="nav-text">JS中Date对象</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#DOM文档对象模型"><span class="nav-number">2.</span> <span class="nav-text">DOM文档对象模型</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#document-querySelector"><span class="nav-number">2.1.</span> <span class="nav-text">document.querySelector</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#document-getElementById-“idname”"><span class="nav-number">2.2.</span> <span class="nav-text">document.getElementById(“idname”)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#document-getElementByTagName"><span class="nav-number">2.3.</span> <span class="nav-text">document.getElementByTagName</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#document-write"><span class="nav-number">2.4.</span> <span class="nav-text">document.write</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#通过DOM对象改变CSS"><span class="nav-number">2.5.</span> <span class="nav-text">通过DOM对象改变CSS</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#EventListener"><span class="nav-number">2.6.</span> <span class="nav-text">EventListener</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#节点Node"><span class="nav-number">3.</span> <span class="nav-text">节点Node</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#JS中Date对象"><span class="nav-number">1.</span> <span class="nav-text">JS中Date对象</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#DOM文档对象模型"><span class="nav-number">2.</span> <span class="nav-text">DOM文档对象模型</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#document-querySelector"><span class="nav-number">2.1.</span> <span class="nav-text">document.querySelector</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#document-getElementById-“idname”"><span class="nav-number">2.2.</span> <span class="nav-text">document.getElementById(“idname”)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#document-getElementByTagName"><span class="nav-number">2.3.</span> <span class="nav-text">document.getElementByTagName</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#document-write"><span class="nav-number">2.4.</span> <span class="nav-text">document.write</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#通过DOM对象改变CSS"><span class="nav-number">2.5.</span> <span class="nav-text">通过DOM对象改变CSS</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#EventListener"><span class="nav-number">2.6.</span> <span class="nav-text">EventListener</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#节点Node"><span class="nav-number">3.</span> <span class="nav-text">节点Node</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#高阶函数"><span class="nav-number">4.</span> <span class="nav-text">高阶函数</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Array数组中的高阶函数"><span class="nav-number">4.1.</span> <span class="nav-text">Array数组中的高阶函数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#闭包"><span class="nav-number">4.2.</span> <span class="nav-text">闭包</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#箭头函数"><span class="nav-number">4.3.</span> <span class="nav-text">箭头函数</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Array对象"><span class="nav-number">5.</span> <span class="nav-text">Array对象</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#CSS伪类"><span class="nav-number">6.</span> <span class="nav-text">CSS伪类</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#nth-child伪类"><span class="nav-number">6.1.</span> <span class="nav-text">:nth-child伪类</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#hover伪类"><span class="nav-number">6.2.</span> <span class="nav-text">:hover伪类</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#focus伪类"><span class="nav-number">6.3.</span> <span class="nav-text">:focus伪类</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#lt-select-gt-元素"><span class="nav-number">7.</span> <span class="nav-text">&lt;select&gt; 元素</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Event-对象"><span class="nav-number">8.</span> <span class="nav-text">Event 对象</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#AJAX"><span class="nav-number">9.</span> <span class="nav-text">AJAX</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#PHP"><span class="nav-number">10.</span> <span class="nav-text">PHP</span></a></li></ol></div>
             
 
           </div>
