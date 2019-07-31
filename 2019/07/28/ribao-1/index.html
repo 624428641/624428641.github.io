@@ -103,7 +103,7 @@
 <meta property="og:site_name" content="卿歌">
 <meta property="og:description" content="JOSN  js对象表示法，存储和交换文本信息的语法数据书写格式：名称/值对  &amp;quot;staff&amp;quot;：[{&amp;quot;name&amp;quot;:&amp;quot;卿卿&amp;quot;},{&amp;quot;age&amp;quot;:123}]还可以是null123var jsondata = &amp;apos;&amp;#123;&amp;quot;staff&amp;quot;：[&amp;#123;&amp;quot;name&amp;quot;:&amp;quot">
 <meta property="og:locale" content="zh-cn">
-<meta property="og:updated_time" content="2019-07-31T07:04:25.429Z">
+<meta property="og:updated_time" content="2019-07-31T08:02:57.276Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="第二周">
 <meta name="twitter:description" content="JOSN  js对象表示法，存储和交换文本信息的语法数据书写格式：名称/值对  &amp;quot;staff&amp;quot;：[{&amp;quot;name&amp;quot;:&amp;quot;卿卿&amp;quot;},{&amp;quot;age&amp;quot;:123}]还可以是null123var jsondata = &amp;apos;&amp;#123;&amp;quot;staff&amp;quot;：[&amp;#123;&amp;quot;name&amp;quot;:&amp;quot">
@@ -400,7 +400,7 @@
                 
                   <span class="post-meta-item-text">Bearbeitet am</span>
                 
-                <time title="Geändert am: 2019-07-31 15:04:25" itemprop="dateModified" datetime="2019-07-31T15:04:25+08:00">2019-07-31</time>
+                <time title="Geändert am: 2019-07-31 16:02:57" itemprop="dateModified" datetime="2019-07-31T16:02:57+08:00">2019-07-31</time>
               
             
           </span>
@@ -443,7 +443,9 @@
 <p>ES6（ES2015）<br>ECMA（ES）是标准，JS是实现，很多浏览器不兼容ES6，但是可以被编译转换<br>ES6对变量，函数，数组，字符串进行了修改，Pronmise,generatpr,模块化</p>
 <p>var可以重复声明，无法限制修改（没有常量），没有块级（函数）作用域，let const 不能重复声明，let变量，const常量，<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">window.onload = function()&#123;</span><br><span class="line">	var aBtn = document.getElementsByTagName(&apos;input&apos;);</span><br><span class="line">	for(let i=0;i&lt;aBtn.length;i++)&#123;</span><br><span class="line">		aBtn[i].onclick = function()&#123;</span><br><span class="line">			alert(i);</span><br><span class="line">		&#125;;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure></p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">window.onload = function()&#123;</span><br><span class="line">	var aBtn = document.getElementsByTagName(&apos;input&apos;);</span><br><span class="line">	for(var i=0;i&lt;aBtn.length;i++)&#123;</span><br><span class="line">		(function(i)&#123;</span><br><span class="line">			aBtn[i].onclick = function()&#123;</span><br><span class="line">				alert(i);</span><br><span class="line">			&#125;;</span><br><span class="line">		&#125;)(i);		</span><br><span class="line">	&#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
-<p>两个代码是一样的结果</p>
+<p>以上两个代码是一样的结果</p>
+<p>箭头函数，()=&gt;{}。如果只有一个参数，()可以省略，如果只有一个return，{}可以省略<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">let show=a=&gt;a*2;</span><br><span class="line">alert(show(12));//24</span><br></pre></td></tr></table></figure></p>
+<p>函数的参数<br>…剩余参数  装着数组</p>
 
       
     </div>
